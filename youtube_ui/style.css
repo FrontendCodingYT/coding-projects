@@ -1,0 +1,98 @@
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+#menu-button {
+  margin-right: 25px;
+}
+
+#youtube-logo-wrapper {
+    display: flex;
+}
+
+#youtube-logo {
+  max-width: 25px;
+  margin-right: 5px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.actions-wrapper {
+  margin-right: 10px;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search-input {
+  width: 500px;
+  padding: 6px;
+  font-size: medium;
+  background-color: #181818;
+  border: 1px solid #2e2e2e;
+  color: white;
+}
+
+#keyboard-button {
+  position: relative;
+  right: 40px;
+}
+
+#search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2e2e;
+  width: 60px;
+  height: 100%;
+  margin-left: -24px;
+}
+
+.hoverable:hover {
+  cursor: pointer;
+}
+
+.navbars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  background-color: #212121;
+  padding: 12px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  display: flex;
+  position: relative;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 225px;
+  height: 100%;
+  background-color: #212121;
+  color: white;
+}
+
+.content {
+  background-color: #181818;
+}
