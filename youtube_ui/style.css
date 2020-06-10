@@ -8,7 +8,7 @@ body {
 }
 
 #youtube-logo-wrapper {
-    display: flex;
+  display: flex;
 }
 
 #youtube-logo {
@@ -60,7 +60,7 @@ body {
 .navbars {
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 57px);
 }
 
 .navbar {
@@ -87,10 +87,51 @@ body {
 }
 
 .sidebar {
-  width: 225px;
+  padding-top: 10px;
+  width: 240px;
   height: 100%;
   background-color: #212121;
   color: white;
+  font-size: 14px;
+  overflow-y: scroll;
+}
+
+.sidebar div:last-child {
+  padding-bottom: 10px;
+}
+
+.sidebar-title {
+  padding: 10px;
+  padding-left: 30px;
+  color: #949494;
+  font-weight: bold;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.sidebar-item:hover {
+  background-color: #353535;
+}
+
+.sidebar-item-icon {
+  margin-right: 20px;
+  color: #838383;
+}
+
+.channel-image {
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.divider {
+  margin: 10px 0px;
+  border-bottom: 0.5px solid #353535;
 }
 
 .content {
