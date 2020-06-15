@@ -1,0 +1,30 @@
+.navbar-container {
+  background-color: white;
+  padding: 10px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.navbar {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo-section {
+  font-family: Brush Script MT, Brush Script Std;
+  font-size: 32px;
+}
+
+.actions-section {
+  display: flex;
+}
+
+.actions-section div:first-child {
+  margin-right: 15px;
+}

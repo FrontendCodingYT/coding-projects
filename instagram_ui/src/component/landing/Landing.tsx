@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 
 import "./Landing.css";
-import Searchbar from "../searchbar/Searchbar";
-import Button from "../button/Button";
+import Content from "../content/Content";
+import Navbar from "../navbar/Navbar";
+import { Post } from "../../models/post/Post";
 
 export default function Landing() {
   const [searchValue, setSearchValue] = useState("");
+
+  function selectPost(post: Post) {
+  }
 
   function onSearchValueChange(newValue: string) {
     setSearchValue(newValue);
@@ -13,19 +17,8 @@ export default function Landing() {
 
   return (
     <div>
-      <div className="navbar-container">
-        <div className="navbar">
-          <div className="logo-section hoverable">Instagram</div>
-          <div className="searchbar-section">
-            <Searchbar searchValue={searchValue} onSearchValueChange={onSearchValueChange} />
-          </div>
-          <div className="actions-section">
-            <Button label="Login In" primary />
-            <Button label="Sign Up" />
-          </div>
-        </div>
-      </div>
-      <div className="content-container"></div>
+      <Navbar searchValue={searchValue} onSearchValueChange={onSearchValueChange} />
+      <Content selectPost={selectPost} />
     </div>
   );
 }
