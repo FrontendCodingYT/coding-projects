@@ -1,0 +1,26 @@
+.searchbar-container {
+    position: relative;
+}
+
+#searchbar {
+    width: 220px;
+    padding: 6px;
+    border-radius: 3px;
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(245, 245, 245);
+}
+
+.searchbar-placeholder {
+    display: flex;
+    align-items: center;
+    color: rgb(150, 150, 150);
+    position: absolute;
+    font-size: 14px;
+    padding: 6px;
+    top: 0px;
+    cursor: text;
+}
+
+#searchbar-placeholder-icon {
+    font-size: 16px;
+}

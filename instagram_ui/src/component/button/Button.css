@@ -1,0 +1,15 @@
+.button {
+  padding: 7px 8px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background-color: #0095f6;
+  color: white;
+}
+
+.secondary-button {
+  color: #0095f6;
+}
