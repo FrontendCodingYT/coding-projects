@@ -2,14 +2,15 @@ import React, { useEffect } from "react";
 
 import "./Content.css";
 
-import posts from "../../data/posts/posts.json";
 import Post from "../post/Post";
+import { Post as PostModel } from "../../models/post/Post";
 
 interface Props {
+  posts: PostModel[];
   selectPost: Function;
 }
 
-export default function Content({ selectPost }: Props) {
+export default function Content({ selectPost, posts }: Props) {
   return (
     <div className="content-container">
       <div className="content">

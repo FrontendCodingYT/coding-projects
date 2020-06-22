@@ -120,6 +120,27 @@
           "profile_name": "King",
           "likes": 1,
           "profile_image_url": "assets/images/profile.jpg"
+        },
+        {
+          "message": "We need to get this animal a nobel prize!",
+          "from": "Liz",
+          "profile_name": "Kuroko",
+          "likes": 1,
+          "profile_image_url": "assets/images/profile.jpg"
+        },
+        {
+          "message": "So much cuteness!!",
+          "from": "Liz",
+          "profile_name": "Sammi",
+          "likes": 1,
+          "profile_image_url": "assets/images/profile.jpg"
+        },
+        {
+          "message": "That is Timon from Lion King!",
+          "from": "Liz",
+          "profile_name": "Pumba",
+          "likes": 1,
+          "profile_image_url": "assets/images/profile.jpg"
         }
       ]
     },
