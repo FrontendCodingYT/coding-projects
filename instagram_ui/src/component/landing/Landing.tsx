@@ -7,9 +7,13 @@ import { Post } from "../../models/post/Post";
 import Modal from "../modal/Modal";
 
 import posts from "../../data/posts/posts.json";
+import stories from "../../data/stories/stories.json";
+
+import Story from "../story/Story";
 
 export default function Landing() {
   const [searchValue, setSearchValue] = useState("");
+  const [storiesOpen, setStoriesOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPost, setSelectedPost] = useState<Post | undefined>(undefined);
   const [allPosts, setAllPosts] = useState<Post[]>([]);
@@ -19,6 +23,14 @@ export default function Landing() {
     setAllPosts([...allPosts, ...posts]);
     setFilteredPosts([...filteredPosts, ...posts]);
   }, []);
+
+  function openStories() {
+    setStoriesOpen(true);
+  }
+
+  function closeStory() {
+    setStoriesOpen(false);
+  }
 
   function selectPost(post: Post) {
     setSelectedPost(post);
@@ -42,8 +54,9 @@ export default function Landing() {
   return (
     <div>
       <Navbar searchValue={searchValue} onSearchValueChange={onSearchValueChange} />
-      <Content posts={filteredPosts} selectPost={selectPost} />
+      <Content openStories={openStories} posts={filteredPosts} selectPost={selectPost} />
       {modalOpen && <Modal post={selectedPost} onClose={closeModal} />}
+      {storiesOpen && <Story stories={stories} onClose={closeStory} />}
     </div>
   );
 }
