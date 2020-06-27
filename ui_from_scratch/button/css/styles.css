@@ -1,0 +1,58 @@
+:root {
+  --primary-color: rgb(53, 42, 209);
+  --primary-color-light: rgb(61, 47, 255);
+  --primary-color-dark: rgb(42, 33, 165);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+body * {
+  margin: 0px 25px;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  padding: 8px 16px;
+  color: white;
+  user-select: none;
+}
+
+.push-button {
+  position: relative;
+  border-radius: 10px;
+  border-bottom: 6px solid var(--primary-color-dark);
+}
+
+.push-button:hover {
+  background-color: var(--primary-color-light);
+  cursor: pointer;
+}
+
+.push-button:active {
+  top: 6px;
+  margin-bottom: 6px;
+  border-bottom: none;
+}
+
+.material-button {
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.material-button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color-dark);
+  box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.material-button:active {
+  box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.2);
+}
