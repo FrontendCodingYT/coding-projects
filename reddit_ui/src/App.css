@@ -3,6 +3,10 @@
   --primary-color: rgb(0, 120, 210);
 }
 
+body {
+  background-color: #dae0e6;
+}
+
 .hoverable:hover {
   cursor: pointer;
 }

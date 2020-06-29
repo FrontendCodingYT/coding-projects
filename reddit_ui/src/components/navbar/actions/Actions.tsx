@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Actions.css";
-import Button from "../button/Button";
+import Button from "../../button/Button";
 
 import PersonIcon from "@material-ui/icons/Person";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
