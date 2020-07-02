@@ -9,8 +9,8 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 export default function Actions() {
   return (
     <div className="actions">
-      <Button label="LOG IN" />
-      <Button primary label="SIGN UP" />
+      <Button secondary label="LOG IN" />
+      <Button label="SIGN UP" />
       <div className="profile">
         <PersonIcon className="hoverable" />
         <ArrowDropDownIcon className="hoverable" />

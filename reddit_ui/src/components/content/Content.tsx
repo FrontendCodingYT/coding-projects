@@ -10,8 +10,11 @@ export default function Content() {
     <div className="content">
       <TrendingToday />
       <div className="bars-wrapper">
-        <MainBar/>
-        <SideBar/>
+        <span className="popular-posts-title">Popular posts</span>
+        <div className="bars-wrapper-inside">
+          <MainBar />
+          <SideBar />
+        </div>
       </div>
     </div>
   );

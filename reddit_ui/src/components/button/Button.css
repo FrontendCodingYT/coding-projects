@@ -4,6 +4,7 @@
     border-radius: var(--border-radius);
     font-weight: bold;
     font-size: 12px;
+    text-align: center;
 }
 
 .button:hover {
@@ -21,4 +22,17 @@
 }
 .secondary-button {
     color: var(--primary-color);
+}
+
+.tertiary-button {
+    color: var(--primary-color);
+    background-color: var(--light-grey);
+
+    padding: 7px 10px;
+
+    border: none;
+}
+
+.tertiary-button:hover {
+    background-color: rgb(235, 235, 235);
 }

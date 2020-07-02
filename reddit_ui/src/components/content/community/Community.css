@@ -1,0 +1,65 @@
+.community-section {
+  background-color: white;
+  border-radius: var(--border-radius);
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.community-section .title {
+  position: relative;
+
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+
+  height: 80px;
+  background-image: url("/assets/images/communities.jpg");
+}
+
+.community-section .title > span {
+  position: absolute;
+
+  bottom: 10px;
+  left: 15px;
+
+  color: white;
+  font-weight: 600;
+}
+
+.community-section .communities-wrapper .community {
+  display: flex;
+  align-items: center;
+  padding: 8px 0px;
+  padding-left: 25px;
+  border-top: 1px solid rgb(240, 240, 240);
+}
+
+.community-section .communities-wrapper .community svg {
+  color: rgb(0, 180, 0);
+}
+
+.community-section .communities-wrapper .community img {
+  max-width: 32px;
+  min-width: 32px;
+  max-height: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+}
+
+.community-section .communities-wrapper .community .name {
+  font-weight: 600;
+}
+
+.community-section .action-buttons {
+    padding: 0px 15px;
+}
+
+.community-section .action-buttons > .primary-button {
+    margin-top: 15px;
+}
+
+.community-section .action-buttons .secondary-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 15px 0px;
+}

@@ -13,8 +13,6 @@ import "./MainBar.css";
 export default function MainBar() {
   return (
     <div className="main-bar">
-      <span className="popular-posts-title">Popular posts</span>
-
       <div className="update-card">
         <div className="top-section">
           <span>UPDATES FROM REDDIT</span>

@@ -1,9 +1,5 @@
 .main-bar {
-  flex: 0.7;
-}
-
-.main-bar .popular-posts-title {
-  font-weight: 600;
+  flex: 0.65;
 }
 
 .main-bar .update-card {
