@@ -1,0 +1,185 @@
+:root {
+  --primary-color: #1976d2;
+  --light-grey-color: rgba(0, 0, 0, 0.4);
+  --dark-grey-color: rgba(0, 0, 0, 0.8);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  margin: 0px;
+
+  font-family: Roboto;
+}
+
+#tutorial-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  position: relative;
+  margin: 10px 0px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* DEFAULT INPUT */
+
+#default-input i {
+  position: absolute;
+
+  left: 0px;
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  margin-left: 8px;
+
+  pointer-events: none;
+}
+
+#default-input input {
+  padding: 10px;
+
+  padding-left: 35px;
+
+  font-family: inherit;
+}
+
+#default-input input::placeholder {
+  font-family: inherit;
+}
+
+/* MATERIAL INPUT */
+
+#material-input input {
+  padding-top: 27px;
+  padding-bottom: 7px;
+
+  border: none;
+
+  font-family: inherit;
+}
+
+#material-input label {
+  position: absolute;
+  left: 0px;
+
+  transform: translate(0px, 27px);
+  transform-origin: top left;
+
+  transition: transform 200ms ease-in-out, color 200ms ease-in-out;
+
+  color: var(--light-grey-color);
+
+  pointer-events: none;
+}
+
+#material-input:focus-within label,
+#material-input input:not(:placeholder-shown) + label {
+  transform: translate(0px, 0px) scale(0.75);
+  color: var(--primary-color);
+}
+
+#material-input::before {
+  content: "";
+
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  transition: border-bottom-color 200ms ease-in-out;
+
+  border-bottom: 1px solid var(--light-grey-color);
+}
+
+#material-input:hover::before {
+  border-bottom: 2px solid var(--dark-grey-color);
+}
+
+#material-input::after {
+  content: "";
+
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  transform: scaleX(0);
+
+  transition: transform 200ms ease-in-out;
+
+  border-bottom: 2px solid var(--primary-color);
+}
+
+#material-input:focus-within::after {
+  transform: scaleX(1);
+}
+
+/* MATERIAL BORDER INPUT */
+
+#material-border-input input {
+  padding: 20px 0px;
+  padding-left: 10px;
+  border: none;
+}
+
+#material-border-input::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+
+  transition: border-color 200ms ease-in-out;
+
+  border: 1px solid var(--light-grey-color);
+
+  border-radius: 5px;
+
+  pointer-events: none;
+}
+
+#material-border-input:hover::before {
+  border: 1px solid var(--dark-grey-color);
+}
+
+#material-border-input:focus-within::before {
+  border: 2px solid var(--primary-color);
+}
+
+#material-border-input label {
+  position: absolute;
+  left: 0px;
+
+  transform: translate(6px, 20px);
+  transform-origin: left;
+
+  transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+
+  padding: 0px 8px;
+
+  color: var(--light-grey-color);
+
+  background-color: white;
+
+  pointer-events: none;
+}
+
+#material-border-input:focus-within label,
+#material-border-input input:not(:placeholder-shown) + label {
+  transform: translate(6px, -10px) scale(0.75);
+  color: var(--primary-color);
+}
