@@ -9,6 +9,7 @@ import MoreHoriz from "@material-ui/icons/MoreHoriz";
 import ArrowDropDown from "@material-ui/icons/ArrowDropDown";
 
 import "./MainBar.css";
+import Posts from "../posts/Posts";
 
 export default function MainBar() {
   return (
@@ -52,6 +53,8 @@ export default function MainBar() {
           <ArrowDropDown />
         </div>
       </div>
+
+      <Posts />
     </div>
   );
 }
