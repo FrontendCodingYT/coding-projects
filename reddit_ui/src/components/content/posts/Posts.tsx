@@ -12,6 +12,7 @@ import ModeCommentIcon from "@material-ui/icons/ModeComment";
 import ShareIcon from "@material-ui/icons/Share";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import Video from "../../video/Video";
 
 export default function Posts() {
   return (
@@ -31,7 +32,12 @@ export default function Posts() {
             <div className="spacer"></div>
             <Button label="+ JOIN" />
           </div>
-          <div className="post-body">S</div>
+          <div className="post-body">
+            <span className="title">{post.title}</span>
+            {post.video_src && <Video src={post.video_src} duration={post.duration} />}
+            {post.image_src && <img src={post.image_src} />}
+            {post.description && <span className="description">{post.description}</span>}
+          </div>
           <div className="post-footer">
             <div className="comments footer-action">
               <ModeCommentIcon className="comment-icon" />

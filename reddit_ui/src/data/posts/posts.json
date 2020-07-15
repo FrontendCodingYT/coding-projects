@@ -32,6 +32,18 @@
       "username": "Triangul8"
     },
     {
+      "title": "Penguin!",
+      "video_src": "assets/videos/penguins.mp4",
+      "duration": 7,
+      "upvotes": 100,
+      "comments": 12,
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "Memes"
+      },
+      "username": "Mrminisky_"
+    },
+    {
       "title": "Favorite vacation destination?",
       "image_src": "assets/images/post-2.jpg",
       "upvotes": 4,

@@ -65,8 +65,6 @@
 
 .posts-wrapper .post .post-body {
   grid-area: post-body;
-
-  background-color: blue;
 }
 
 .posts-wrapper .post .post-footer {
@@ -114,6 +112,28 @@
   padding: 4px 8px;
 
   font-size: 11px;
+}
+
+.posts-wrapper .post .post-body > .title {
+  margin-left: 5px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.posts-wrapper .post .post-body > img {
+  object-fit: cover;
+  object-position: center;
+
+  max-height: 500px;
+  width: 100%;
+}
+
+.posts-wrapper .post .post-body > .description {
+  margin-top: 10px;
+  margin-left: 5px;
+
+  display: block;
 }
 
 .posts-wrapper .post .post-footer .footer-action {
