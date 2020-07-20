@@ -1,17 +1,61 @@
-.button-container {
-    border: 1px solid var(--grey-color);
-    padding: 10px 40px;
+/* PRIMARY BUTTON */
 
-    background: none;
-    color: var(--grey-color);
+.primary-button {
+  transition: background 200ms linear;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 40px;
 
-    font-size: 24px;
-    letter-spacing: 2px;
+  background-color: white;
+
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
 }
 
-.button-container:hover {
-    border: 1px solid white;
+.primary-button:hover {
+    background-color: rgb(200, 200, 200);
+}
 
-    color: white;
-    cursor: pointer;
+/* SECONDARY BUTTON */
+
+.secondary-ghost-button {
+  border: 1px solid var(--grey-color);
+  padding: 10px 40px;
+
+  background: none;
+  color: var(--grey-color);
+
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.secondary-ghost-button:hover {
+  border: 1px solid white;
+
+  color: white;
+}
+
+.secondary-button {
+  transition: background 200ms linear;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 40px;
+
+  background: rgba(120, 120, 120, 0.4);
+  color: white;
+
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.secondary-button:hover {
+  background: rgba(50, 50, 50, 0.4);
+}
+
+/* DEFAULT BUTTON STYLES */
+
+.button-container:hover {
+  cursor: pointer;
 }
