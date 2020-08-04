@@ -1,0 +1,6 @@
+.content-container {
+    grid-area: content;
+
+    background-color: #181818;
+    color: white;
+}

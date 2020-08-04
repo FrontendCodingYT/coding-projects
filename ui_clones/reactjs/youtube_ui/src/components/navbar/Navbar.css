@@ -4,6 +4,7 @@
     justify-content: space-between;
 
     display: flex;
+    grid-area: navbar;
 
     padding: 10px 16px;
 
@@ -111,34 +112,10 @@
     display: flex;
 }
 
-.navbar-container > .action-section > .sign-in-button:hover,
 .navbar-container > .action-section > .more:hover,
 .navbar-container > .action-section > .apps:hover,
 .navbar-container > .action-section > .record:hover {
     cursor: pointer;
-}
-
-.navbar-container > .action-section > .sign-in-button {
-    align-items: center;
-
-    display: inline-flex;
-
-    border: 1px solid #3EA6FF;
-    border-radius: 3px;
-    padding: 5px 10px;
-
-    background: none;
-    color: #3EA6FF;
-
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -1px;
-}
-
-.navbar-container > .action-section > .sign-in-button > svg {
-    margin-right: 5px;
-    font-size: 26px;
 }
 
 .navbar-container > .action-section > .more {
