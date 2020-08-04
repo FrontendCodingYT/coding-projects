@@ -2,6 +2,7 @@ import React from "react";
 
 import "./Browse.css";
 import Button from "../../components/button/Button";
+import MovieList from "../../components/movieList/MovieList";
 
 export default function Browse() {
   return (
@@ -16,6 +17,8 @@ export default function Browse() {
           </div>
         </div>
       </div>
+
+      <MovieList/>
     </div>
   );
 }
