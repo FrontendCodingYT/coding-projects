@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Navbar.css";
 
@@ -10,7 +10,11 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import LabelButton from "../labelButton/LabelButton";
 import SignInButton from "../signInButton/SignInButton";
 
-export default function Navbar() {
+interface Props {
+  searchValue: string;
+  setSearchValue: Function;
+}
+export default function Navbar({searchValue, setSearchValue}: Props) {
   return (
     <nav className="navbar-container">
       <div className="logo-section">
@@ -21,7 +25,7 @@ export default function Navbar() {
       </div>
 
       <div className="search-section">
-        <input className="searchbar" placeholder="Search" />
+        <input className="searchbar" placeholder="Search" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
         <LabelButton
           label="Search"
           className="search-button"

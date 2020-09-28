@@ -1,6 +1,22 @@
 .content-container {
     grid-area: content;
 
+    padding: 35px 70px;
+
     background-color: #181818;
     color: white;
+}
+
+.content-container > .content-title {
+    margin: 0px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.content-container > .video-grid {
+    display: grid;
+
+    grid-template-columns: auto auto auto auto;
+    row-gap: 25px;
 }

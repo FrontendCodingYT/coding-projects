@@ -1,8 +1,12 @@
+.sidebar-container:hover {
+    overflow-y: scroll;
+}
+
 .sidebar-container {
     position: fixed;
     top: 55px;
 
-    overflow-y: scroll;
+    overflow-y: hidden;
 
     padding-top: 15px;
     width: 240px;
@@ -12,6 +16,10 @@
     color: white;
 
     font-size: 15px;
+}
+
+.sidebar-container > :not(.divider) {
+    max-width: 195px;
 }
 
 .sidebar-container .divider {
