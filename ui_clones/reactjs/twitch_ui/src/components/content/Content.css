@@ -1,0 +1,6 @@
+#content {
+    grid-area: content;
+    background-color: #0e0e10;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}

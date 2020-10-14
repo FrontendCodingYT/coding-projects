@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+#landing {
+    display: grid;
+    grid-template-areas: "navbar navbar" "sidebar content";
+    grid-template-columns: 220px auto;
+    grid-template-rows: 50px auto;
+    height: 100vh;
+}

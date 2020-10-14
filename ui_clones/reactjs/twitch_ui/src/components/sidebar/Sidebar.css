@@ -1,0 +1,6 @@
+#sidebar {
+    grid-area: sidebar;
+    background-color: #1f1f23;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
