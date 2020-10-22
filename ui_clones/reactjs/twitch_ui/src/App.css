@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+:root {
+    --primary-color: #9147ff;
+    --navbar-height: 50px;
+    --sidebar-width: 220px;
+}
+
 #landing {
     display: grid;
     grid-template-areas: "navbar navbar" "sidebar content";
-    grid-template-columns: 220px auto;
-    grid-template-rows: 50px auto;
+    grid-template-columns: var(--sidebar-width) auto;
+    grid-template-rows: var(--navbar-height) auto;
     height: 100vh;
 }

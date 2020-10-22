@@ -1,0 +1,7 @@
+#navigation-section {
+    flex: 1;
+}
+
+#navigation-section .logo {
+    height: 100%;
+}
