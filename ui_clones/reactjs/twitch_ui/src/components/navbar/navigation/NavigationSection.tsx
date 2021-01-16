@@ -14,9 +14,6 @@ export default function NavigationSection() {
     return <div id="navigation-section">
         <a className="logo" href="/"><img alt="Twitch logo" src={twitchLogo}/></a>
         <Link style={linkStyle} label="Browse"/>
-        <div className="vertical-divider"></div>
-        <Link style={linkStyle} label="Esports"/>
-        <Link style={linkStyle} label="Music"/>
         <IconButton/>
     </div>
 }
