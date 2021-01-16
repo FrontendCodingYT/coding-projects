@@ -16,6 +16,16 @@
     cursor: pointer;
 }
 
+.icon-button .number {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    background-color: #e91916;
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-family: Roboto;
+}
+
 .icon-button:hover .tooltip {
     visibility: visible;
     transition-delay: 0.2s;
@@ -31,6 +41,7 @@
     color: black;
     font-family: 'Roboto';
     font-weight: 500;
+    white-space: nowrap;
     transition: visibility;
 }
 
