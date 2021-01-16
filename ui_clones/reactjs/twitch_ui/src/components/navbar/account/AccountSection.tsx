@@ -11,8 +11,8 @@ import Button from '../../button/Button';
 export default function AccountSection() {
     return <div id="account-section">
         <IconButton number={60} tooltip="New Prime Loot" Icon={Inbox}/>
-        <Button/>
-        <Button/>
+        <Button secondary label="Log In"/>
+        <Button label="Sign Up"/>
         <IconButton Icon={PersonOutline}/>
     </div>
 }
