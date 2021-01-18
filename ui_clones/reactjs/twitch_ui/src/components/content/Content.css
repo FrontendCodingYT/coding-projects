@@ -1,5 +1,8 @@
 #content {
     grid-area: content;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
     background-color: #0e0e10;
     color: white;
     font-family: 'Roboto', sans-serif;

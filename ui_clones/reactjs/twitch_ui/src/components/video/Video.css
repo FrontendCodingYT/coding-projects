@@ -1,0 +1,47 @@
+.video {
+    display: flex;
+}
+
+.video video {
+    width: 520px;
+}
+
+.video .side-menu {
+    display: grid;
+    grid-template-areas: "profile-picture username" "profile-picture category" "profile-picture watchers" "tags tags" "description description";
+    grid-template-columns: 64px auto;
+    grid-template-rows: 20px 20px 20px 40px auto;
+    padding: 10px;
+    width: 220px;
+    background-color: #18181b;
+}
+
+.video .side-menu .profile-picture {
+    grid-area: profile-picture;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.video .side-menu .username {
+    grid-area: username;
+}
+
+.video .side-menu .category {
+    grid-area: category;
+}
+
+.video .side-menu .watchers {
+    grid-area: watchers;
+    font-size: 0.75rem;
+}
+
+.video .side-menu .tags {
+    grid-area: tags;
+}
+
+.video .side-menu .description {
+    grid-area: description;
+    font-size: 0.85rem;
+}
