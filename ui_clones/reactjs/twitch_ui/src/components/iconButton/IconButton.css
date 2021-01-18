@@ -36,12 +36,11 @@
 .icon-button .tooltip {
     position: absolute;
     visibility: hidden;
-    top: 150%;
     border-radius: 4px;
     padding: 5px;
     background-color: white;
     color: black;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 500;
     white-space: nowrap;
     transition: visibility;
@@ -50,10 +49,28 @@
 .icon-button .tooltip::after {
     content: " ";
     position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.icon-button .tooltip-bottom {
+    top: 150%;
+}
+
+.icon-button .tooltip-bottom::after {
     bottom: 100%;
     left: 50%;
     margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
     border-color: transparent transparent white transparent;
+}
+
+.icon-button .tooltip-right {
+    left: 150%;
+}
+
+.icon-button .tooltip-right::after {
+    right: 100%;
+    top: 50%;
+    margin-top: -5px;
+    border-color: transparent white transparent transparent;
 }

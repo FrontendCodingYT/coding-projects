@@ -4,3 +4,15 @@
     color: white;
     font-family: 'Roboto', sans-serif;
 }
+
+#sidebar .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sidebar .top-section>span {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
