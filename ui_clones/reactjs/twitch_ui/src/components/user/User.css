@@ -1,0 +1,49 @@
+.user {
+    display: grid;
+    grid-template-areas: "profile-picture username watchers" "profile-picture description blank";
+    grid-template-columns: 40px auto auto;
+    padding: 6px 10px;
+}
+
+.user:hover {
+    background-color: #26262c;
+    cursor: pointer;
+}
+
+.user .profile-picture {
+    grid-area: profile-picture;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.user .username {
+    grid-area: username;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.user .description {
+    grid-area: description;
+    font-size: 0.75rem;
+    color: #a1a1a1;
+    /* font-weight: 500; */
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user .watchers {
+    grid-area: watchers;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    color: #c0c0c0;
+}
+
+.user .watchers .dot {
+    font-size: 0.55rem;
+    margin-right: 5px;
+}
