@@ -26,22 +26,41 @@
 
 .video .side-menu .username {
     grid-area: username;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.85;
+}
+
+.video .side-menu .username:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .video .side-menu .category {
     grid-area: category;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+.video .side-menu .category:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .video .side-menu .watchers {
     grid-area: watchers;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .video .side-menu .tags {
     grid-area: tags;
 }
 
+.video .side-menu .tags>.button {
+    margin: 0px 2px;
+}
+
 .video .side-menu .description {
     grid-area: description;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }

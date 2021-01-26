@@ -1,5 +1,6 @@
 import React from "react";
 import { Video as VideoModel } from "../../models/video";
+import Button from "../button/Button";
 
 import "./Video.css";
 
@@ -16,7 +17,7 @@ export default function Video({ video }: Props) {
           <span className="username">{video.username}</span>
           <span className="category">{video.category}</span>
           <span className="watchers">58 viewers</span>
-          <div className="tags">{video.tags.map(t => {return <button>{t}</button>})}</div>
+          <div className="tags">{video.tags.map(t => {return <Button tertiary label={t}/>})}</div>
           <span className="description">{video.description}</span>
       </div>
     </div>

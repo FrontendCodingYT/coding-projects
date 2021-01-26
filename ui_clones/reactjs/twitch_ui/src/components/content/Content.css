@@ -5,5 +5,28 @@
     padding-top: 25px;
     background-color: #0e0e10;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+#content .video-slideshow {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+#content .video-slideshow>.icon-button:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+}
+
+#content .video-slideshow>.icon-button:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+}
+
+#content .video-slideshow>.video {
+    position: absolute;
+    left: calc(50% - 380px);
 }

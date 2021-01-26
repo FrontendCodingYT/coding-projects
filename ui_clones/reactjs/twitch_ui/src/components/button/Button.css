@@ -27,3 +27,15 @@
 .secondary-button:hover {
     background-color: #464649;
 }
+
+.tertiary-button {
+    padding: 3px 10px;
+    border-radius: 25px;
+    background-color: #3a3a3d;
+    color: #b5c1c2;
+    font-size: 0.75rem;
+}
+
+.tertiary-button:hover {
+    background-color: #464649;
+}
