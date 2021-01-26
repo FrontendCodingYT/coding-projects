@@ -11,27 +11,18 @@ import ChevronLeft from "@material-ui/icons/ChevronLeft";
 import ChevronRight from "@material-ui/icons/ChevronRight";
 import IconButton from "../iconButton/IconButton";
 
+const classes = ["video-left-2", "video-left-1", "video-center", "video-right-1", "video-right-2"];
+
 export default function Content() {
   const slideShowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const element_left_2 = createVideoElement(videos[0]);
-    element_left_2.classList.add("video-left-2")
-    const element_left_1 = createVideoElement(videos[1]);
-    element_left_1.classList.add("video-left-1")
-    const element_center = createVideoElement(videos[2]);
-    element_center.classList.add("video-center")
-    const element_right_1 = createVideoElement(videos[3]);
-    element_right_1.classList.add("video-right-1")
-    const element_right_2 = createVideoElement(videos[4]);
-    element_right_2.classList.add("video-right-2")
-
     if (slideShowRef.current) {
-      slideShowRef.current.children[0].insertAdjacentElement("afterend", element_right_2);
-      slideShowRef.current.children[0].insertAdjacentElement("afterend", element_right_1);
-      slideShowRef.current.children[0].insertAdjacentElement("afterend", element_center);
-      slideShowRef.current.children[0].insertAdjacentElement("afterend", element_left_1);
-      slideShowRef.current.children[0].insertAdjacentElement("afterend", element_left_2);
+      for(let i = 0; i < 5; i++) {
+        const element = createVideoElement(videos[i]);
+        element.classList.add(classes[classes.length - 1  - i]);
+        slideShowRef.current.children[0].insertAdjacentElement("afterend", element);
+      }    
     }
   }, []);
 
@@ -95,11 +86,55 @@ export default function Content() {
   }
 
   function previous() {
-    console.log("previous");
+    if(slideShowRef.current) {
+      const children = slideShowRef.current.getElementsByClassName("video");
+      if(children) {
+        const lastChild = children[children.length-1]
+        //REMOVING LAST ELEMENT
+        slideShowRef.current.removeChild(lastChild);
+
+        for(let i = 0; i < children.length; i++) {
+          const currentChild = children[i];
+
+          for(let j = classes.length-1; j >= 0; j --) {
+            if(currentChild.classList.contains(classes[j])) {
+              currentChild.classList.remove(classes[j]);
+              currentChild.classList.add(classes[j+1]);
+            }
+          }
+        }
+
+        const newChild = createVideoElement(videos[0]);
+        newChild.classList.add(classes[0]);
+        slideShowRef.current.children[0].insertAdjacentElement("afterend", newChild);
+      }
+    }
   }
 
   function next() {
-    console.log("next");
+    if(slideShowRef.current) {
+      const children = slideShowRef.current.getElementsByClassName("video");
+      if(children) {
+        const firstChild = children[0]
+        //REMOVING LAST ELEMENT
+        slideShowRef.current.removeChild(firstChild);
+
+        for(let i = 0; i < children.length; i++) {
+          const currentChild = children[i];
+
+          for(let j = 0; j < classes.length; j ++) {
+            if(currentChild.classList.contains(classes[j])) {
+              currentChild.classList.remove(classes[j]);
+              currentChild.classList.add(classes[j-1]);
+            }
+          }
+        }
+
+        const newChild = createVideoElement(videos[0]);
+        newChild.classList.add(classes[classes.length-1]);
+        slideShowRef.current.children[slideShowRef.current.children.length-1].insertAdjacentElement("beforebegin", newChild);
+      }
+    }
   }
   return (
     <div id="content">

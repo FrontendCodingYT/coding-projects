@@ -29,4 +29,33 @@
 #content .video-slideshow>.video {
     position: absolute;
     left: calc(50% - 380px);
+    transition: all 300ms ease-in-out;
+}
+
+#content .video-slideshow>.video-left-2 {
+    z-index: 1;
+    transform: translateX(-65%);
+    scale: 0.75;
+}
+
+#content .video-slideshow>.video-left-1 {
+    z-index: 2;
+    transform: translateX(-30%);
+    scale: 0.85;
+}
+
+#content .video-slideshow>.video-center {
+    z-index: 3;
+}
+
+#content .video-slideshow>.video-right-1 {
+    z-index: 2;
+    transform: translateX(30%);
+    scale: 0.85;
+}
+
+#content .video-slideshow>.video-right-2 {
+    z-index: 1;
+    transform: translateX(65%);
+    scale: 0.75;
 }
