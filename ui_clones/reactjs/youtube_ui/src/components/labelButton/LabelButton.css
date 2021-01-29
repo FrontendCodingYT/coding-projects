@@ -1,0 +1,32 @@
+.label-container:hover > .label {
+    opacity: 1;
+}
+
+.label-container > .label {
+    position: absolute;
+    top: 0px;
+
+    display: inline-block;
+
+    transition: opacity 100ms linear;
+
+    transform: translate(0px, 50px);
+
+    padding: 10px 7px;
+    border-radius: 3px;
+
+    background-color: #696969;
+    color: white;
+    font-size: 13px;
+    
+    white-space: nowrap;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.label-container {
+    justify-content: center;
+
+    display: inline-flex;
+}

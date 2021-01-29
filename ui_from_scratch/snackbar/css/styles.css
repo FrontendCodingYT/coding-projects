@@ -1,0 +1,50 @@
+body {
+    height: 200vh;
+}
+
+#snackbar {
+    position: fixed;
+    left: 40px;
+    bottom: 20px;
+    align-items: center;
+
+    display: flex;
+
+    border-radius: 10px;
+    padding: 15px;
+
+    box-shadow: 0px 5px 2px 2px rgba(0, 0, 0, 0.1);
+
+    background-color: rgb(72, 72, 221);
+}
+
+#snackbar > span {
+    color: white;
+    font-family: Roboto;
+}
+
+#snackbar > button {
+    margin-left: 20px;
+    padding: 0px;
+    border: none;
+
+    background: none;
+}
+
+#snackbar > button:hover {
+    cursor: pointer;
+}
+
+#snackbar > button > i {
+    color: white;
+}
+
+.snackbar {
+    transform: translate(0px, 100px);
+
+    transition: transform 500ms ease-in-out;
+}
+
+.snackbar-visible {
+    transform: translate(0px, 0px);
+}

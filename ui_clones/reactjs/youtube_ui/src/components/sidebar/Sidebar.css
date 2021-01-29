@@ -1,0 +1,71 @@
+.sidebar-container:hover {
+    overflow-y: scroll;
+}
+
+.sidebar-container {
+    position: fixed;
+    top: 55px;
+
+    overflow-y: hidden;
+
+    padding-top: 15px;
+    width: 240px;
+    height: calc(100vh - 70px);
+
+    background-color: #212121;
+    color: white;
+
+    font-size: 15px;
+}
+
+.sidebar-container > :not(.divider) {
+    max-width: 195px;
+}
+
+.sidebar-container .divider {
+    margin: 10px 0px;
+    border-bottom: solid 1px rgb(50, 50, 50);
+}
+
+.sidebar-container .sidebar-section-title {
+    padding: 5px 0px;
+    padding-left: 30px;
+    margin: 0px;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(180, 180, 180);
+}
+
+.sidebar-container .sign-in {
+    padding-left: 30px;
+}
+
+.sidebar-container .sign-in button {
+    margin-top: 15px;
+}
+
+.sidebar-container .link-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 20px;
+}
+
+.sidebar-container .link-block:first-child {
+    margin-bottom: 15px;
+}
+
+.sidebar-container .link-block a {
+    padding-left: 6px;
+
+    color: rgb(180, 180, 180);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.sidebar-container .copyright {
+    padding-left: 30px;
+    font-size: 13px;
+    color: rgb(120, 120, 120);
+}

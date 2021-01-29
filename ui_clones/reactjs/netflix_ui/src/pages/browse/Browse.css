@@ -1,0 +1,37 @@
+.browse-container {
+  color: white;
+}
+
+.browse-container .thumbnail-section {
+  position: relative;
+}
+
+.browse-container .thumbnail-section .thumbnail {
+  width: 100%;
+  height: 95vh;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.browse-container .thumbnail-section .description-section {
+  position: absolute;
+
+  bottom: 200px;
+  left: 80px;
+
+  max-width: 700px;
+}
+
+.browse-container .thumbnail-section .description-section .description {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.browse-container .thumbnail-section .description-section .actions {
+  margin-top: 50px;
+}
+
+.browse-container .thumbnail-section .description-section .actions > .primary-button:first-child {
+    margin-right: 15px;
+}

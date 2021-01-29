@@ -1,0 +1,29 @@
+.movie {
+  position: relative;
+  transition: transform 200ms ease-in-out, margin 200ms ease-in-out;
+
+  margin: 0px 2px;
+  height: 180px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.movie .title {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  opacity: 0;
+}
+
+.movie:hover {
+  cursor: pointer;
+
+  margin: 0px 40px;
+
+  transform: scale(1.2);
+}
+
+.movie:hover .title {
+  opacity: 1;
+}

@@ -1,0 +1,41 @@
+.button {
+    border-radius: 3px;
+    padding: 8px 10px;
+    border: none;
+    color: white;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: #9147ff;
+}
+
+.primary-button:hover {
+    background-color: #772ce8;
+}
+
+.secondary-button {
+    background-color: #3a3a3d;
+}
+
+.secondary-button:hover {
+    background-color: #464649;
+}
+
+.tertiary-button {
+    padding: 3px 10px;
+    border-radius: 25px;
+    background-color: #3a3a3d;
+    color: #b5c1c2;
+    font-size: 0.75rem;
+}
+
+.tertiary-button:hover {
+    background-color: #464649;
+}

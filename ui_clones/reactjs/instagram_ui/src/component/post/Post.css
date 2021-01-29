@@ -1,0 +1,50 @@
+.post-container {
+  margin: 15px;
+
+  position: relative;
+}
+
+.post-image {
+  width: 300px;
+  height: 300px;
+
+  display: block;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.post-container:hover {
+    cursor: pointer;
+}
+
+.post-container:hover .post-overlay {
+  opacity: 1;
+}
+
+.post-container:hover .post-image {
+  filter: brightness(60%);
+}
+
+.post-overlay {
+  color: white;
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.post-overlay span:first-child {
+    margin-right: 25px;
+}
+
+.post-overlay span {
+    display: flex;
+    align-items: center;
+}
+
+.post-overlay span svg {
+    margin-right: 8px;
+}

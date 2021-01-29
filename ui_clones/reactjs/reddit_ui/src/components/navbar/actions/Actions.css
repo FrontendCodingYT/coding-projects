@@ -1,0 +1,22 @@
+.actions {
+  display: flex;
+  align-items: center;
+  color: rgb(130, 130, 130);
+}
+
+.actions div:nth-child(2) {
+    margin: 0px 15px;
+}
+
+.profile {
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}
+
+.profile:hover {
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.profile svg {
+  margin-right: 8px;
+}
