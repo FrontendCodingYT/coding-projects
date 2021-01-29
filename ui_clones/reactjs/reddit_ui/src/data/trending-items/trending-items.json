@@ -1,0 +1,42 @@
+[
+    {
+      "image_src": "assets/images/art.jpg",
+      "title": "Street art",
+      "description": "Coolest street art pictures ever taken",
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "amazing art"
+      }
+    },
+  
+    {
+      "image_src": "assets/images/tiger.jpg",
+      "title": "Big tiger",
+      "description": "Big tiger in the wild searches for food",
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "animals"
+      }
+    },
+  
+    {
+      "image_src": "assets/images/programming.jpg",
+      "title": "Web development",
+      "description": "Top 5 tricks to speed up your web development process and get better results",
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "programming"
+      }
+    },
+  
+    {
+      "image_src": "assets/images/soccer.jpg",
+      "title": "Epic goal",
+      "description": "Watch this goal being made!",
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "sports"
+      }
+    }
+  ]
+  

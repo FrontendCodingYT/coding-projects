@@ -1,0 +1,73 @@
+.content-details {
+  width: 960px;
+  margin: auto;
+  padding-top: 25px;
+  display: flex;
+}
+
+.cover-image-box {
+  display: flex;
+  margin-left: 25px;
+  max-width: min-content;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgb(248, 248, 248);
+  background-clip: padding-box;
+  border: solid 3px transparent;
+  border-radius: 50%;
+}
+
+.cover-image-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  margin: -3px;
+  border-radius: inherit;
+  background: linear-gradient(to right, orange, purple);
+}
+
+.cover-image-box img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.content-details .details {
+  margin-left: 25px;
+}
+
+.content-details .details .title {
+  font-size: 21px;
+}
+
+.amount-of-posts span:first-child {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.amount-of-posts {
+  margin-bottom: 30px;
+}
+
+.details .hashtags {
+  font-size: 13px;
+}
+
+.details .hashtags span:first-child {
+  color: rgb(150, 150, 150);
+}
+
+.details .hashtags span:not(:first-child) {
+  color: rgb(50, 80, 100);
+  margin-left: 5px;
+}
+
+.details .hashtags span:not(:first-child):hover {
+  cursor: pointer;
+}

@@ -1,0 +1,58 @@
+[
+    {
+      "title": "Which fictional world would you live in?",
+      "upvotes": 39,
+      "comments": 3,
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "AskReddit"
+      },
+      "username": "Kiki9"
+    },
+    {
+      "title": "Crossover!",
+      "image_src": "assets/images/post-1.jpg",
+      "upvotes": 100,
+      "comments": 12,
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "Memes"
+      },
+      "username": "Mrminisky_"
+    },
+    {
+      "title": "Snacks",
+      "description": "What was your best and biggest snack?",
+      "upvotes": 3,
+      "comments": 1,
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "Snacks"
+      },
+      "username": "Triangul8"
+    },
+    {
+      "title": "Penguin!",
+      "video_src": "assets/videos/penguins.mp4",
+      "duration": 7,
+      "upvotes": 100,
+      "comments": 12,
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "Memes"
+      },
+      "username": "Mrminisky_"
+    },
+    {
+      "title": "Favorite vacation destination?",
+      "image_src": "assets/images/post-2.jpg",
+      "upvotes": 4,
+      "comments": 8,
+      "subreddit": {
+        "image_src": "assets/images/subreddit.jpg",
+        "name": "VacationDestinations"
+      },
+      "username": "Josh017"
+    }
+  ]
+  

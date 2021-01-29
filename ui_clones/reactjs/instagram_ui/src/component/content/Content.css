@@ -1,0 +1,14 @@
+.content-container {
+    background-color: rgb(248, 248, 248);
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    width: 960px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+}

@@ -1,0 +1,69 @@
+.navbar-container {
+  z-index: 1;
+  
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+
+  padding: 20px 40px;
+  padding-bottom: 10px;
+
+  align-items: center;
+
+  display: flex;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, transparent);
+}
+
+.navbar-container > .logo {
+  width: 100px;
+  margin-right: 40px;
+}
+
+.navbar-container > .logo:hover {
+  cursor: pointer;
+}
+
+.navbar-container > .button-tertiary {
+  transition: color 100ms linear;
+
+  border: none;
+  padding: 0px;
+  margin: 0px 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+
+  background: none;
+  color: rgb(230, 230, 230);
+  outline: none;
+}
+
+.navbar-container > .button-tertiary:hover {
+  color: rgb(180, 180, 180);
+  cursor: pointer;
+}
+
+.navbar-container > .button-tertiary-active {
+  font-weight: 500;
+
+  color: white;
+}
+
+.navbar-container > .button-tertiary-active:hover {
+  color: white;
+  cursor: unset;
+}
+
+.navbar-container > svg {
+  color: white;
+  
+  margin: 0px 10px;
+}
+
+.navbar-container > .profile-image {
+  width: 32px;
+  height: 32px;
+}

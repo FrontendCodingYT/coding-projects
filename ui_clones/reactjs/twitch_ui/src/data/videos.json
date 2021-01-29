@@ -1,0 +1,57 @@
+[{
+        "username": "Chess",
+        "category": "Chess",
+        "tags": ["Chess", "English"],
+        "description": "Watch this livestream about chess!",
+        "video": "/assets/videos/chess_video.mp4",
+        "image": "/assets/images/bunny.jpg"
+    },
+    {
+        "username": "Cheese",
+        "category": "Food",
+        "tags": ["Food", "English"],
+        "description": "Watch this livestream about Cheese!",
+        "video": "/assets/videos/chess_video.mp4",
+        "image": "/assets/images/bunny.jpg"
+    },
+    {
+        "username": "Checkers",
+        "category": "Checkers",
+        "tags": ["Checkers", "French"],
+        "description": "Watch this livestream about checkers!",
+        "video": "/assets/videos/chess_video.mp4",
+        "image": "/assets/images/bunny.jpg"
+    },
+    {
+        "username": "Animals",
+        "category": "Animals",
+        "tags": ["Animals", "Polish", "Danish"],
+        "description": "Watch this livestream about animals!",
+        "video": "/assets/videos/chess_video.mp4",
+        "image": "/assets/images/bunny.jpg"
+    },
+    {
+        "username": "Sleep",
+        "category": "Sleep",
+        "tags": ["Meditation", "Sleep"],
+        "description": "Watch this livestream about meditation!",
+        "video": "/assets/videos/chess_video.mp4",
+        "image": "/assets/images/bunny.jpg"
+    },
+    {
+        "username": "Fries",
+        "category": "Fries",
+        "tags": ["Potatoes", "fries", "English"],
+        "description": "Watch this livestream about fries!",
+        "video": "/assets/videos/chess_video.mp4",
+        "image": "/assets/images/bunny.jpg"
+    },
+    {
+        "username": "Trees",
+        "category": "Trees",
+        "tags": ["Birch", "Maple"],
+        "description": "Watch this livestream about trees!",
+        "video": "/assets/videos/chess_video.mp4",
+        "image": "/assets/images/bunny.jpg"
+    }
+]
