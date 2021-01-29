@@ -1,0 +1,34 @@
+.video-thumbnail-container > .thumbnail {
+    height: 200px;
+
+    object-position: center;
+    object-fit: cover;
+}
+
+.video-thumbnail-container > .description {
+    display: flex;
+    margin-top: 5px;
+}
+
+.video-thumbnail-container > .description > .channel-icon {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+} 
+
+.video-thumbnail-container > .description > .details > .title {
+    margin: 0px;
+
+    font-weight: 500;
+    color: white;
+}
+
+.video-thumbnail-container > .description > .details {
+    color: rgb(180, 180, 180);
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 15px;
+}

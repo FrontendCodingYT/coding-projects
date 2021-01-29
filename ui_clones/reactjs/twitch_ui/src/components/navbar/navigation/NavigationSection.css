@@ -1,0 +1,13 @@
+#navigation-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+#navigation-section .logo {
+    display: contents;
+}
+
+#navigation-section .logo img {
+    height: 100%;
+}

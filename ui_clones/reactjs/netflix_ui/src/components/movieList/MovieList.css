@@ -1,0 +1,65 @@
+.movie-list-container {
+  position: relative;
+
+  margin-top: -100px;
+}
+
+.movie-list-container > .title {
+  font-size: 24px;
+  padding-left: 80px;
+}
+
+.movie-list-container .movies {
+  display: grid;
+
+  grid-template-columns: repeat(2, 100%);
+
+  overflow: hidden;
+
+  scroll-behavior: smooth;
+}
+
+.movie-list-container .movies section {
+  position: relative;
+  display: grid;
+
+  grid-template-columns: repeat(5, auto);
+
+  margin: 40px 0px;
+}
+
+.movie-list-container .movies section .previous {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  align-items: center;
+
+  display: flex;
+}
+
+.movie-list-container .movies section .next {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  align-items: center;
+
+  display: flex;
+}
+
+.movie-list-container .movies section .previous {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+}
+.movie-list-container .movies section .next {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.movie-list-container .movies section .next svg,
+.movie-list-container .movies section .previous svg {
+  color: white;
+  font-size: 48px;
+}

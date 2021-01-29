@@ -1,0 +1,67 @@
+#video-container {
+  position: relative;
+}
+
+#video-player {
+  width: 100%;
+  display: block;
+}
+
+#video-container:hover #video-controls .video-control,
+#video-container:hover #video-controls .video-controls-background {
+  opacity: 1;
+}
+
+#video-controls {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0px;
+
+  display: flex;
+
+  width: 100%;
+  padding-bottom: 15px;
+
+  color: white;
+}
+
+#video-controls .video-controls-background {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+
+  transition: opacity 100ms linear;
+
+  opacity: 0;
+}
+
+#video-controls .video-button .reddit-logo {
+  max-height: 24px;
+  max-width: 24px;
+}
+
+#video-controls .video-button {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 0px;
+
+  cursor: pointer;
+}
+
+#video-controls .video-control {
+  opacity: 0;
+  transition: opacity 100ms linear;
+  z-index: 2;
+}
+
+#video-controls .video-control-always-present {
+  opacity: 1;
+  z-index: 2;
+}

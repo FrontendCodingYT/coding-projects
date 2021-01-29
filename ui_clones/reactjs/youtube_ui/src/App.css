@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --secondary-color: #202020;
+}
+
+.page-container {
+  height: 150vh;
+}
+
+.page-container {
+  display: grid;
+
+  grid-template-areas: "navbar navbar" "sidebar content";
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 55px 1fr;
+}
