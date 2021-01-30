@@ -1,13 +1,21 @@
+/*GENERAL VIDEO SECTION*/
+
 .video {
     display: flex;
 }
 
-.video video {
+.video .side-menu {
+    display: grid;
+}
+
+
+/*VIDEO RIGHT SECTION*/
+
+.video-right video {
     width: 520px;
 }
 
-.video .side-menu {
-    display: grid;
+.video-right .side-menu {
     grid-template-areas: "profile-picture username" "profile-picture category" "profile-picture watchers" "tags tags" "description description";
     grid-template-columns: 64px auto;
     grid-template-rows: 20px 20px 20px 40px auto;
@@ -16,7 +24,7 @@
     background-color: #18181b;
 }
 
-.video .side-menu .profile-picture {
+.video-right .side-menu .profile-picture {
     grid-area: profile-picture;
     width: 48px;
     height: 48px;
@@ -24,43 +32,110 @@
     object-fit: cover;
 }
 
-.video .side-menu .username {
+.video-right .side-menu .username {
     grid-area: username;
     color: var(--primary-color);
     font-weight: 500;
     font-size: 0.85;
 }
 
-.video .side-menu .username:hover {
+.video-right .side-menu .username:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.video .side-menu .category {
+.video-right .side-menu .category {
     grid-area: category;
     color: var(--primary-color);
     font-size: 0.85rem;
 }
 
-.video .side-menu .category:hover {
+.video-right .side-menu .category:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.video .side-menu .watchers {
+.video-right .side-menu .watchers {
     grid-area: watchers;
     font-size: 0.85rem;
 }
 
-.video .side-menu .tags {
+.video-right .side-menu .tags {
     grid-area: tags;
 }
 
-.video .side-menu .tags>.button {
+.video-right .side-menu .tags>.button {
     margin: 0px 2px;
 }
 
-.video .side-menu .description {
+.video-right .side-menu .description {
     grid-area: description;
     font-size: 0.8rem;
+}
+
+
+/*VIDEO BOTTOM SECTION*/
+
+.video-bottom {
+    flex-direction: column;
+}
+
+.video-bottom .side-menu {
+    grid-template-areas: "profile-picture title" "profile-picture username" ". category" ". tags";
+    grid-template-columns: 64px auto;
+    grid-template-rows: 20px 20px 20px auto;
+}
+
+.video-bottom .side-menu .profile-picture {
+    grid-area: profile-picture;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.video-bottom .side-menu .profile-picture:hover {
+    cursor: pointer;
+}
+
+.video-bottom .side-menu .title {
+    grid-area: title;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.video-bottom .side-menu .username {
+    grid-area: username;
+    color: #a1a1a1;
+    font-size: 0.85rem;
+}
+
+.video-bottom .side-menu .username:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.video-bottom .side-menu .category {
+    grid-area: category;
+    color: #a1a1a1;
+    font-size: 0.85rem;
+}
+
+.video-bottom .side-menu .category:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.video-bottom .side-menu .tags {
+    grid-area: tags;
+}
+
+.video-bottom .side-menu .tags>.button {
+    margin: 0px 2px;
+    margin-top: 5px;
+}
+
+.video-bottom .side-menu .tags>.button:first-of-type {
+    margin-right: 2px;
 }

@@ -11,24 +11,33 @@ import ChevronLeft from "@material-ui/icons/ChevronLeft";
 import ChevronRight from "@material-ui/icons/ChevronRight";
 import IconButton from "../iconButton/IconButton";
 
-const classes = ["video-left-2", "video-left-1", "video-center", "video-right-1", "video-right-2"];
+const classes = [
+  "video-left-2",
+  "video-left-1",
+  "video-center",
+  "video-right-1",
+  "video-right-2",
+];
 
 export default function Content() {
   const slideShowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (slideShowRef.current) {
-      for(let i = 0; i < 5; i++) {
+      for (let i = 0; i < 5; i++) {
         const element = createVideoElement(videos[i]);
-        element.classList.add(classes[classes.length - 1  - i]);
-        slideShowRef.current.children[0].insertAdjacentElement("afterend", element);
-      }    
+        element.classList.add(classes[classes.length - 1 - i]);
+        slideShowRef.current.children[0].insertAdjacentElement(
+          "afterend",
+          element
+        );
+      }
     }
   }, []);
 
   function createVideoElement(video: VideoModel) {
     const element = document.createElement("div");
-    element.className = "video";
+    element.className = "video video-right";
 
     const videoElement = document.createElement("video");
     videoElement.src = video.video;
@@ -86,53 +95,58 @@ export default function Content() {
   }
 
   function previous() {
-    if(slideShowRef.current) {
+    if (slideShowRef.current) {
       const children = slideShowRef.current.getElementsByClassName("video");
-      if(children) {
-        const lastChild = children[children.length-1]
+      if (children) {
+        const lastChild = children[children.length - 1];
         //REMOVING LAST ELEMENT
         slideShowRef.current.removeChild(lastChild);
 
-        for(let i = 0; i < children.length; i++) {
+        for (let i = 0; i < children.length; i++) {
           const currentChild = children[i];
 
-          for(let j = classes.length-1; j >= 0; j --) {
-            if(currentChild.classList.contains(classes[j])) {
+          for (let j = classes.length - 1; j >= 0; j--) {
+            if (currentChild.classList.contains(classes[j])) {
               currentChild.classList.remove(classes[j]);
-              currentChild.classList.add(classes[j+1]);
+              currentChild.classList.add(classes[j + 1]);
             }
           }
         }
 
         const newChild = createVideoElement(videos[0]);
         newChild.classList.add(classes[0]);
-        slideShowRef.current.children[0].insertAdjacentElement("afterend", newChild);
+        slideShowRef.current.children[0].insertAdjacentElement(
+          "afterend",
+          newChild
+        );
       }
     }
   }
 
   function next() {
-    if(slideShowRef.current) {
+    if (slideShowRef.current) {
       const children = slideShowRef.current.getElementsByClassName("video");
-      if(children) {
-        const firstChild = children[0]
+      if (children) {
+        const firstChild = children[0];
         //REMOVING LAST ELEMENT
         slideShowRef.current.removeChild(firstChild);
 
-        for(let i = 0; i < children.length; i++) {
+        for (let i = 0; i < children.length; i++) {
           const currentChild = children[i];
 
-          for(let j = 0; j < classes.length; j ++) {
-            if(currentChild.classList.contains(classes[j])) {
+          for (let j = 0; j < classes.length; j++) {
+            if (currentChild.classList.contains(classes[j])) {
               currentChild.classList.remove(classes[j]);
-              currentChild.classList.add(classes[j-1]);
+              currentChild.classList.add(classes[j - 1]);
             }
           }
         }
 
         const newChild = createVideoElement(videos[0]);
-        newChild.classList.add(classes[classes.length-1]);
-        slideShowRef.current.children[slideShowRef.current.children.length-1].insertAdjacentElement("beforebegin", newChild);
+        newChild.classList.add(classes[classes.length - 1]);
+        slideShowRef.current.children[
+          slideShowRef.current.children.length - 1
+        ].insertAdjacentElement("beforebegin", newChild);
       }
     }
   }
@@ -141,6 +155,16 @@ export default function Content() {
       <div ref={slideShowRef} className="video-slideshow">
         <IconButton onClick={previous} Icon={ChevronLeft} />
         <IconButton onClick={next} Icon={ChevronRight} />
+      </div>
+      <div className="channels">
+        <span className="title">Live channels we think you’ll like</span>
+        <div className="videos">
+          <Video video={videos[0]} />
+          <Video video={videos[0]} />
+          <Video video={videos[0]} />
+          <Video video={videos[0]} />
+          <Video video={videos[0]} />
+        </div>
       </div>
     </div>
   );

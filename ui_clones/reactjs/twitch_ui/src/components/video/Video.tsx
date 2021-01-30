@@ -6,20 +6,45 @@ import "./Video.css";
 
 interface Props {
   video: VideoModel;
+  right?: boolean;
+  bottom?: boolean;
 }
 
-export default function Video({ video }: Props) {
-  return (
-    <div className="video">
-      <video controls src={video.video}></video>
-      <div className="side-menu">
-          <img className="profile-picture" src={video.image}/>
+export default function Video({ video, right, bottom }: Props) {
+  if (right) {
+    return (
+      <div className="video video-right">
+        <video controls src={video.video}></video>
+        <div className="side-menu">
+          <img className="profile-picture" src={video.image} />
           <span className="username">{video.username}</span>
           <span className="category">{video.category}</span>
           <span className="watchers">58 viewers</span>
-          <div className="tags">{video.tags.map(t => {return <Button tertiary label={t}/>})}</div>
+          <div className="tags">
+            {video.tags.map((t) => {
+              return <Button tertiary label={t} />;
+            })}
+          </div>
           <span className="description">{video.description}</span>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="video video-bottom">
+        <video controls src={video.video}></video>
+        <div className="side-menu">
+          <img className="profile-picture" src={video.image} />
+          <span className="title">Coding is fun!</span>
+          <span className="username">{video.username}</span>
+          <span className="category">{video.category}</span>
+          <div className="tags">
+            {video.tags.map((t) => {
+              return <Button tertiary label={t} />;
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }

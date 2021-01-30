@@ -1,7 +1,5 @@
 #content {
-    grid-area: content;
-    display: flex;
-    justify-content: center;
+    padding: 0px 30px;
     padding-top: 25px;
     background-color: #0e0e10;
     color: white;
@@ -58,4 +56,24 @@
     z-index: 1;
     transform: translateX(65%);
     scale: 0.75;
+}
+
+#content .channels {
+    margin-top: 50px;
+}
+
+#content .channels>.title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#content .channels .videos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 15px;
+}
+
+#content .channels .videos .video-bottom video {
+    width: 100%;
 }
