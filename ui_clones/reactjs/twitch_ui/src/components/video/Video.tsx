@@ -32,7 +32,11 @@ export default function Video({ video, right, bottom }: Props) {
   } else {
     return (
       <div className="video video-bottom">
-        <video controls src={video.video}></video>
+        <div className="video-wrapper">
+          <div className="left-bar-side"></div>
+          <div className="bottom-bar-side"></div>
+          <video src={video.video}></video>
+        </div>
         <div className="side-menu">
           <img className="profile-picture" src={video.image} />
           <span className="title">Coding is fun!</span>

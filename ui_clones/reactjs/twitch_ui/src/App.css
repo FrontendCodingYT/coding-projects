@@ -3,6 +3,7 @@
     --primary-color: #9147ff;
     --navbar-height: 50px;
     --sidebar-width: 240px;
+    --shadow-size: 0.4rem;
 }
 
 #landing {
