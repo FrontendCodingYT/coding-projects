@@ -4,7 +4,7 @@
     grid-template-columns: 35% auto;
     margin: 5vh 0px;
     width: 1300px;
-    background-color: aliceblue;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .chatbox-navigation-open {
@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top-left-radius: 3px;
     background-color: #eeeeee;
 }
 
@@ -40,6 +41,7 @@
 
 .chatbox .details {
     grid-area: details;
+    border-top-right-radius: 3px;
     background-color: green;
 }
 
@@ -89,10 +91,12 @@
 
 .chatbox .list {
     grid-area: list;
+    border-bottom-left-radius: 3px;
     background-color: purple;
 }
 
 .chatbox .message {
     grid-area: message;
+    border-bottom-right-radius: 3px;
     background-color: lime;
 }
