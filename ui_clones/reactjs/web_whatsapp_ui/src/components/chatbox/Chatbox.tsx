@@ -3,6 +3,7 @@ import "./Chatbox.css";
 
 import MessageIcon from "@material-ui/icons/Message";
 import MoreVertIcon from "@material-ui/icons/MoreVert"
+import SearchIcon from "@material-ui/icons/Search";
 
 export default function Chatbox() {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -16,7 +17,12 @@ export default function Chatbox() {
           <MoreVertIcon/>
         </div>
       </div>
-      <div className="search"></div>
+      <div className="search">
+        <label htmlFor="searchbar">
+          <SearchIcon/>
+        </label>
+        <input id="searchbar" placeholder="Search contacts"/>
+      </div>
       <div className="list"></div>
       <div className="details"></div>
       <div className="chat"></div>

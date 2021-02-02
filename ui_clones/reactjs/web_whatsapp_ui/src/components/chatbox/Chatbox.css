@@ -44,8 +44,42 @@
 }
 
 .chatbox .search {
+    position: relative;
     grid-area: search;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbfbfb;
+}
+
+.chatbox .search label {
+    position: absolute;
+    display: flex;
+    left: 40px;
+}
+
+.chatbox .search label>svg {
+    color: #afafaf;
+}
+
+.chatbox .search input {
+    padding: 12px;
+    padding-left: 80px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 3px;
+    width: 70%;
+    background-color: white;
+    outline: none;
+}
+
+.chatbox .search input:focus {
+    border: 1px solid rgb(220, 220, 220);
+}
+
+.chatbox .search input::placeholder {
+    font-family: Roboto;
+    font-size: 0.85rem;
+    color: #777777;
 }
 
 .chatbox .chat {
