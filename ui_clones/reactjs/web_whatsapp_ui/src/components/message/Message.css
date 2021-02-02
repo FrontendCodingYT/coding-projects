@@ -1,0 +1,45 @@
+.message-container {
+    display: flex;
+}
+
+.message-us {
+    justify-content: flex-end;
+}
+
+.message-them {
+    justify-content: flex-start;
+}
+
+.message-us .message {
+    background-color: #dcf8c7;
+}
+
+.message-theirs .message {
+    background-color: #eeeeee;
+}
+
+.message-container .message {
+    position: relative;
+    border-radius: 10px;
+    padding: 12px 20px;
+}
+
+.message-us .message::after {
+    content: " ";
+    position: absolute;
+    right: -10px;
+    border-top: 10px solid transparent;
+    border-left: 18px solid #dcf8c7;
+    border-bottom: 10px solid transparent;
+    top: 20px;
+}
+
+.message-theirs .message::after {
+    content: " ";
+    position: absolute;
+    left: -10px;
+    border-top: 10px solid transparent;
+    border-right: 18px solid #eeeeee;
+    border-bottom: 10px solid transparent;
+    top: 20px;
+}
