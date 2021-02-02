@@ -39,7 +39,7 @@
     font-size: 1.6rem;
 }
 
-.chatbox .details {
+.chatbox>.details {
     grid-area: details;
     border-top-right-radius: 3px;
     background-color: green;
@@ -52,6 +52,7 @@
     align-items: center;
     justify-content: center;
     background-color: #fbfbfb;
+    border-bottom: 1px solid #e7e7e7;
 }
 
 .chatbox .search label {
@@ -91,8 +92,14 @@
 
 .chatbox .list {
     grid-area: list;
+    overflow-y: scroll;
     border-bottom-left-radius: 3px;
-    background-color: purple;
+    background-color: white;
+}
+
+.chatbox .list .contact:last-of-type .details {
+    padding-bottom: 0px;
+    border: none;
 }
 
 .chatbox .message {

@@ -1,0 +1,32 @@
+.contact {
+    display: grid;
+    grid-template-areas: "picture details" "picture details";
+    grid-template-columns: 80px auto;
+    height: 70px;
+    padding: 10px 0px;
+    padding-left: 20px;
+}
+
+.contact .profile-picture {
+    grid-area: picture;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+}
+
+.contact .details {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.contact .name {
+    grid-area: name;
+    font-size: 1.2rem;
+}
+
+.contact .status {
+    grid-area: status;
+    color: rgb(100, 100, 100);
+}

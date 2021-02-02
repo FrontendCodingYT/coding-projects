@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./Chatbox.css";
+import contacts from "../../data/contacts.json";
+
+import Contact from "../contact/Contact";
 
 import MessageIcon from "@material-ui/icons/Message";
 import MoreVertIcon from "@material-ui/icons/MoreVert"
@@ -23,7 +26,11 @@ export default function Chatbox() {
         </label>
         <input id="searchbar" placeholder="Search contacts"/>
       </div>
-      <div className="list"></div>
+      <div className="list">
+        {contacts.map((c) => {
+          return <Contact contact={c}/>
+        })}
+      </div>
       <div className="details"></div>
       <div className="chat"></div>
       <div className="message"></div>
