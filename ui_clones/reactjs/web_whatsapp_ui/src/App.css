@@ -2,5 +2,5 @@
     display: flex;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(#009788 25vh, #d9dbd6 25vh);
+    background: linear-gradient(#009788 200px, #d9dbd6 200px);
 }

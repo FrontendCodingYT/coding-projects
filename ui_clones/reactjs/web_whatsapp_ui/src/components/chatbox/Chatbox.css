@@ -1,16 +1,41 @@
 .chatbox {
     display: grid;
     grid-template-areas: "navigation details" "navigation chat" "search chat" "list chat" "list message";
-    grid-template-rows: 90px 70px 80px auto 90px;
     grid-template-columns: 35% auto;
     margin: 5vh 0px;
     width: 1300px;
     background-color: aliceblue;
 }
 
+.chatbox-navigation-open {
+    /* Navigation height of the open navigation state*/
+    grid-template-rows: 90px calc(200px - 5vh - 90px) 80px auto 90px;
+}
+
+.chatbox-navigation-closed {
+    /* Navigation height of the closed navigation state*/
+    grid-template-rows: 90px 0px 80px auto 90px;
+}
+
 .chatbox .navigation {
     grid-area: navigation;
-    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eeeeee;
+}
+
+.chatbox .navigation .profile-picture {
+    margin-left: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.chatbox .navigation .actions>svg {
+    margin-right: 25px;
+    color: #777777;
+    font-size: 1.6rem;
 }
 
 .chatbox .details {
