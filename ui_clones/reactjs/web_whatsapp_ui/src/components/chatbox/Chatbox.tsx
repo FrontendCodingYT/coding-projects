@@ -8,6 +8,8 @@ import Details from "../details/Details";
 import MessageIcon from "@material-ui/icons/Message";
 import MoreVertIcon from "@material-ui/icons/MoreVert"
 import SearchIcon from "@material-ui/icons/Search";
+import MoodIcon from "@material-ui/icons/Mood";
+import MicIcon from "@material-ui/icons/Mic";
 
 
 export default function Chatbox() {
@@ -17,7 +19,7 @@ export default function Chatbox() {
   return (
     <div className={`chatbox ${(navigationOpen) ? 'chatbox-navigation-open' : 'chatbox-navigation-closed'}`}>
       <div className="navigation-section">
-        <img className="profile-picture" src="assets/images/Frontend_Coding.png"/>
+        <img alt="profile" className="profile-picture" src="assets/images/Frontend_Coding.png"/>
         <div className="actions">
           <MessageIcon/>
           <MoreVertIcon/>
@@ -31,12 +33,16 @@ export default function Chatbox() {
       </div>
       <div className="list-section">
         {contacts.map((c) => {
-          return <Contact contact={c}/>
+          return <Contact key={c.name} contact={c}/>
         })}
       </div>
       <Details contact={selectedContact}/>
       <div className="chat-section"></div>
-      <div className="message-section"></div>
+      <div className="message-section">
+        <MoodIcon/>
+        <input className="message-input"/>
+        <MicIcon/>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ interface Props {
 export default function Contact({ contact }: Props) {
   return (
     <div className="contact">
-      <img className="profile-picture" src={contact.profile_image} />
+      <img alt="profile" className="profile-picture" src={contact.profile_image} />
       <div className="details">
         <span className="name">{contact.name}</span>
         <span className="status">{contact.status}</span>

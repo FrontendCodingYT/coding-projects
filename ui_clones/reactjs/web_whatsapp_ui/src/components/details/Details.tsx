@@ -13,7 +13,7 @@ export default function Details({contact}: Props) {
   return (
     <div className="details-section">
       <div className="user">
-        <img className="profile-picture" src={contact.profile_image} />
+        <img alt="profile" className="profile-picture" src={contact.profile_image} />
         <div className="details">
           <span className="name">{contact.name}</span>
           <span className="last-seen">Time</span>

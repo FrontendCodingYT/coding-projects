@@ -28,7 +28,7 @@
 
 .details-section .actions>svg {
     margin-right: 25px;
-    color: #777777;
+    color: var(--icon-color);
     font-size: 1.6rem;
 }
 
