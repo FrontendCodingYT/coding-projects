@@ -5,6 +5,12 @@
     height: 70px;
     padding: 10px 0px;
     padding-left: 20px;
+    background-color: white;
+}
+
+.contact:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
 }
 
 .contact .profile-picture {

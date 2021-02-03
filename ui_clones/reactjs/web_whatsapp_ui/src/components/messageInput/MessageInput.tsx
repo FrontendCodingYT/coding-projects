@@ -7,7 +7,7 @@ export default function MessageInput() {
     return (
         <div className="message-section">
         <MoodIcon className="icon-clickable"/>
-        <input className="message-input"/>
+        <input className="message-input" placeholder="Type a message"/>
         <MicIcon className="icon-clickable"/>
       </div>
     )
