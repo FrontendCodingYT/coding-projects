@@ -1,0 +1,39 @@
+.chatbox .search-section {
+    position: relative;
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.chatbox .search-section label {
+    position: absolute;
+    display: flex;
+    left: 40px;
+}
+
+.chatbox .search-section label>svg {
+    color: #afafaf;
+}
+
+.chatbox .search-section input {
+    padding: 12px;
+    padding-left: 80px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 3px;
+    width: 70%;
+    background-color: white;
+    outline: none;
+}
+
+.chatbox .search-section input:focus {
+    border: 1px solid rgb(220, 220, 220);
+}
+
+.chatbox .search-section input::placeholder {
+    font-family: Roboto;
+    font-size: 0.85rem;
+    color: var(--icon-color);
+}

@@ -2,6 +2,7 @@
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Alex",
         "status": "Hey there! I am using WhatsApp!",
+        "last_seen": "2021-02-03 11:14:00",
         "messages": [{
                 "message": "Hello there!",
                 "timestamp": "2021-02-03 11:14:00",
@@ -33,60 +34,70 @@
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "James",
         "status": "Hi!",
+        "last_seen": "2021-02-02 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Daniel",
         "status": "Coding!",
+        "last_seen": "2021-02-01 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Mike",
         "status": "Hello there!",
+        "last_seen": "2021-01-03 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Robin",
         "status": "Just checking in!",
+        "last_seen": "2021-01-05 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Justin",
         "status": "WhatsUp!",
+        "last_seen": "2021-01-07 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Jim",
         "status": "Howdy there!",
+        "last_seen": "2021-01-05 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Evelyn",
         "status": "Whats popin!",
+        "last_seen": "2021-01-09 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Lee",
         "status": "Hiya!",
+        "last_seen": "2021-01-10 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Oscar",
         "status": "Im present!",
+        "last_seen": "2021-01-10 11:14:00",
         "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "William",
         "status": "Hello world!",
+        "last_seen": "2020-12-03 11:14:00",
         "messages": []
     }
 ]

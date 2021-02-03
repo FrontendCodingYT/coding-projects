@@ -1,0 +1,23 @@
+.chatbox .message-section {
+    grid-area: message;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius: 3px;
+    background-color: #f0efed;
+}
+
+.chatbox .message-section>svg {
+    flex: 0.1;
+    color: var(--icon-color);
+    font-size: 2rem;
+}
+
+.chatbox .message-section>.message-input {
+    flex: 0.8;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    outline: none;
+    font-size: 1rem;
+    font-family: Roboto;
+}

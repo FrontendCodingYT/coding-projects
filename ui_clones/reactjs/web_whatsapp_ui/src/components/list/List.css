@@ -1,0 +1,11 @@
+.chatbox .list-section {
+    grid-area: list;
+    overflow-y: scroll;
+    border-bottom-left-radius: 3px;
+    background-color: white;
+}
+
+.chatbox .list-section .contact:last-of-type .details {
+    padding-bottom: 0px;
+    border: none;
+}

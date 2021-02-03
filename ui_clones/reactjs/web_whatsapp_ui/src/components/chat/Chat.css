@@ -1,0 +1,8 @@
+.chatbox .chat-section {
+    grid-area: chat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 100px;
+    background-color: #e4ddd7;
+}
