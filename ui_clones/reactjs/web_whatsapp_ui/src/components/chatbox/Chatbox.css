@@ -17,7 +17,29 @@
     grid-template-rows: 90px 0px 80px auto 90px;
 }
 
-.chatbox .navigation-section {
+.chatbox-navigation-open .navigation-section {
+    grid-area: navigation;
+    display: flex;
+    align-items: flex-end;
+    background-color: #01bfa5;
+}
+
+.chatbox-navigation-open .navigation-section .back {
+    padding-bottom: 15px;
+    padding-left: 30px;
+    color: white;
+    font-size: 2rem;
+}
+
+.chatbox-navigation-open .navigation-section .new-chat {
+    padding: 15px;
+    padding-left: 25px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.chatbox-navigation-closed .navigation-section {
     grid-area: navigation;
     display: flex;
     align-items: center;
@@ -26,14 +48,14 @@
     background-color: #eeeeee;
 }
 
-.chatbox .navigation-section .profile-picture {
+.chatbox-navigation-closed .navigation-section .profile-picture {
     margin-left: 25px;
     width: var(--profile-picture-size);
     height: var(--profile-picture-size);
     border-radius: 50%;
 }
 
-.chatbox .navigation-section .actions>svg {
+.chatbox-navigation-closed .navigation-section .actions>svg {
     margin-right: 25px;
     color: var(--icon-color);
     font-size: 1.6rem;

@@ -10,3 +10,7 @@
     height: 100vh;
     background: linear-gradient(#009788 200px, #d9dbd6 200px);
 }
+
+.icon-clickable:hover {
+    cursor: pointer;
+}

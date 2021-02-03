@@ -20,8 +20,8 @@ export default function Details({contact}: Props) {
         </div>
       </div>
       <div className="actions">
-        <AttachFileIcon />
-        <MoreVertIcon />
+        <AttachFileIcon className="icon-clickable" />
+        <MoreVertIcon className="icon-clickable" />
       </div>
     </div>
   );

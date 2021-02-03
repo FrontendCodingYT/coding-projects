@@ -6,9 +6,9 @@ import MicIcon from "@material-ui/icons/Mic";
 export default function MessageInput() {
     return (
         <div className="message-section">
-        <MoodIcon/>
+        <MoodIcon className="icon-clickable"/>
         <input className="message-input"/>
-        <MicIcon/>
+        <MicIcon className="icon-clickable"/>
       </div>
     )
 }

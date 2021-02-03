@@ -4,11 +4,12 @@ import { Contact as ContactModel } from "../../models/Contact";
 
 interface Props {
   contact: ContactModel;
+  onClick: Function;
 }
 
-export default function Contact({ contact }: Props) {
+export default function Contact({ contact, onClick }: Props) {
   return (
-    <div className="contact">
+    <div onClick={(e) => onClick(contact)} className="contact">
       <img alt="profile" className="profile-picture" src={contact.profile_image} />
       <div className="details">
         <span className="name">{contact.name}</span>
