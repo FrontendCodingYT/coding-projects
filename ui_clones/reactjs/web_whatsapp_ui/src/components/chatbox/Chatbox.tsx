@@ -19,7 +19,7 @@ export default function Chatbox() {
       <Search/>
       <List contacts={contacts}/>
       <Details contact={selectedContact}/>
-      <Chat/>
+      <Chat messages={selectedContact.messages}/>
       <MessageInput/>
     </div>
   );

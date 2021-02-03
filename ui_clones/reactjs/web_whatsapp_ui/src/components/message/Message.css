@@ -22,6 +22,14 @@
     position: relative;
     border-radius: 10px;
     padding: 12px 20px;
+    margin: 5px 0px;
+}
+
+.message-container .message .timestamp {
+    display: inline-block;
+    transform: translate(5px, 5px);
+    font-size: 0.8rem;
+    color: rgb(100, 100, 100);
 }
 
 .message-us .message::after {

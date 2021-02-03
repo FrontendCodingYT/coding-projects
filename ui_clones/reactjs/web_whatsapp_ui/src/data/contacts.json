@@ -1,56 +1,92 @@
 [{
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Alex",
-        "status": "Hey there! I am using WhatsApp!"
+        "status": "Hey there! I am using WhatsApp!",
+        "messages": [{
+                "message": "Hello there!",
+                "timestamp": "2021-02-03 11:14:00",
+                "from": "us"
+            },
+            {
+                "message": "Hello there!",
+                "timestamp": "2021-02-03 11:15:00",
+                "from": "them"
+            },
+            {
+                "message": "How are you doing?",
+                "timestamp": "2021-02-03 11:15:20",
+                "from": "them"
+            },
+            {
+                "message": "Good and you?",
+                "timestamp": "2021-02-03 11:20:00",
+                "from": "us"
+            },
+            {
+                "message": "I am also good!",
+                "timestamp": "2021-02-03 20:20:00",
+                "from": "them"
+            }
+        ]
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "James",
-        "status": "Hi!"
+        "status": "Hi!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Daniel",
-        "status": "Coding!"
+        "status": "Coding!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Mike",
-        "status": "Hello there!"
+        "status": "Hello there!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Robin",
-        "status": "Just checking in!"
+        "status": "Just checking in!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Justin",
-        "status": "WhatsUp!"
+        "status": "WhatsUp!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Jim",
-        "status": "Howdy there!"
+        "status": "Howdy there!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Evelyn",
-        "status": "Whats popin!"
+        "status": "Whats popin!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Lee",
-        "status": "Hiya!"
+        "status": "Hiya!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "Oscar",
-        "status": "Im present!"
+        "status": "Im present!",
+        "messages": []
     },
     {
         "profile_image": "assets/images/Frontend_Coding.png",
         "name": "William",
-        "status": "Hello world!"
+        "status": "Hello world!",
+        "messages": []
     }
 ]
