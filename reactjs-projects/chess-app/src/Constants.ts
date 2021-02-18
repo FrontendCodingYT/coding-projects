@@ -47,8 +47,8 @@ export const initialBoardState: Piece[] = [
   {
     image: `assets/images/knight_b.png`,
     position: {
-      x: 1,
-      y: 7,
+      x: 3,
+      y: 3,
     },
     type: PieceType.KNIGHT,
     team: TeamType.OPPONENT,
