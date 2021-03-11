@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/css/main.ed50f013.chunk.css",
+    "main.js": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/main.1ea84993.chunk.js",
+    "main.js.map": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/main.1ea84993.chunk.js.map",
+    "runtime-main.js": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/runtime-main.28faa2a3.js",
+    "runtime-main.js.map": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/runtime-main.28faa2a3.js.map",
+    "static/js/2.664b3a96.chunk.js": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/2.664b3a96.chunk.js",
+    "static/js/2.664b3a96.chunk.js.map": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/2.664b3a96.chunk.js.map",
+    "static/js/3.e5939beb.chunk.js": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/3.e5939beb.chunk.js",
+    "static/js/3.e5939beb.chunk.js.map": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/3.e5939beb.chunk.js.map",
+    "index.html": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/index.html",
+    "static/css/main.ed50f013.chunk.css.map": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/css/main.ed50f013.chunk.css.map",
+    "static/js/2.664b3a96.chunk.js.LICENSE.txt": "/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build/static/js/2.664b3a96.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28faa2a3.js",
+    "static/js/2.664b3a96.chunk.js",
+    "static/css/main.ed50f013.chunk.css",
+    "static/js/main.1ea84993.chunk.js"
+  ]
+}
