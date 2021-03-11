@@ -3,7 +3,7 @@ Hello and welcome to the GitHub repository! Below are the links to the webapplic
 
 [Twitch UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/twitch_ui/build)
 
-## Web WhatsApp UI
+[Web WhatsApp UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/web_whatsapp_ui/build)
 
 [YouTube UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/youtube_ui/build)
 
