@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/css/main.88eb3ab2.chunk.css",
+    "main.js": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/main.c75feae4.chunk.js",
+    "main.js.map": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/main.c75feae4.chunk.js.map",
+    "runtime-main.js": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/runtime-main.fcfa6e1e.js",
+    "runtime-main.js.map": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/runtime-main.fcfa6e1e.js.map",
+    "static/js/2.2bbc98ea.chunk.js": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/2.2bbc98ea.chunk.js",
+    "static/js/2.2bbc98ea.chunk.js.map": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/2.2bbc98ea.chunk.js.map",
+    "index.html": "/coding-projects/ui_clones/reactjs/reddit_ui/build/index.html",
+    "precache-manifest.97bbdde3ba3676c09384b57488e5ee8e.js": "/coding-projects/ui_clones/reactjs/reddit_ui/build/precache-manifest.97bbdde3ba3676c09384b57488e5ee8e.js",
+    "service-worker.js": "/coding-projects/ui_clones/reactjs/reddit_ui/build/service-worker.js",
+    "static/css/main.88eb3ab2.chunk.css.map": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/css/main.88eb3ab2.chunk.css.map",
+    "static/js/2.2bbc98ea.chunk.js.LICENSE.txt": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/2.2bbc98ea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fcfa6e1e.js",
+    "static/js/2.2bbc98ea.chunk.js",
+    "static/css/main.88eb3ab2.chunk.css",
+    "static/js/main.c75feae4.chunk.js"
+  ]
+}
