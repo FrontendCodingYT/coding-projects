@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/css/main.03ebd5c4.chunk.css",
+    "main.js": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/js/main.2f7f7c49.chunk.js",
+    "main.js.map": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/js/main.2f7f7c49.chunk.js.map",
+    "runtime-main.js": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/js/runtime-main.16fb21cd.js",
+    "runtime-main.js.map": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/js/runtime-main.16fb21cd.js.map",
+    "static/js/2.370e9d40.chunk.js": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/js/2.370e9d40.chunk.js",
+    "static/js/2.370e9d40.chunk.js.map": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/js/2.370e9d40.chunk.js.map",
+    "index.html": "/coding-projects/ui_clones/reactjs/youtube_ui/build/index.html",
+    "precache-manifest.e2b05cd9e5b48cb67f22c7e219f57f16.js": "/coding-projects/ui_clones/reactjs/youtube_ui/build/precache-manifest.e2b05cd9e5b48cb67f22c7e219f57f16.js",
+    "service-worker.js": "/coding-projects/ui_clones/reactjs/youtube_ui/build/service-worker.js",
+    "static/css/main.03ebd5c4.chunk.css.map": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/css/main.03ebd5c4.chunk.css.map",
+    "static/js/2.370e9d40.chunk.js.LICENSE.txt": "/coding-projects/ui_clones/reactjs/youtube_ui/build/static/js/2.370e9d40.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.16fb21cd.js",
+    "static/js/2.370e9d40.chunk.js",
+    "static/css/main.03ebd5c4.chunk.css",
+    "static/js/main.2f7f7c49.chunk.js"
+  ]
+}
