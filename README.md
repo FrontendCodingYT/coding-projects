@@ -9,7 +9,6 @@ Hello and welcome to the GitHub repository! Below are the links to the webapplic
 
 ## Reddit UI
 
-## Netflix UI
+[Netflix UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/netflix_ui/build)
 
-## Instagram UI
 [Instagram UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/instagram_ui/build)
