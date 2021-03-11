@@ -7,7 +7,7 @@ Hello and welcome to the GitHub repository! Below are the links to the webapplic
 
 ## YouTube UI
 
-## Reddit UI
+[Reddit UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/reddit_ui/build)
 
 [Netflix UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/netflix_ui/build)
 
