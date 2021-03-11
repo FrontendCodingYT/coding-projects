@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "91ee2c854b9f6e77c8433addac1429a4",
+    "revision": "31d5482e941d3393ef65c3e04d315b44",
     "url": "/coding-projects/ui_clones/reactjs/reddit_ui/build/index.html"
   },
   {
-    "revision": "0acecda39d980ca9fbe9",
+    "revision": "c4a0c5ee5f215ab5444d",
     "url": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/css/main.88eb3ab2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/2.2bbc98ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0acecda39d980ca9fbe9",
-    "url": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/main.c75feae4.chunk.js"
+    "revision": "c4a0c5ee5f215ab5444d",
+    "url": "/coding-projects/ui_clones/reactjs/reddit_ui/build/static/js/main.9b4a4376.chunk.js"
   },
   {
     "revision": "6836cad0da753199f476",
