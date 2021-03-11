@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/css/main.3b8e739b.chunk.css",
+    "main.js": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/js/main.2be31b68.chunk.js",
+    "main.js.map": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/js/main.2be31b68.chunk.js.map",
+    "runtime-main.js": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/js/runtime-main.3a61317f.js",
+    "runtime-main.js.map": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/js/runtime-main.3a61317f.js.map",
+    "static/js/2.a0c51f97.chunk.js": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/js/2.a0c51f97.chunk.js",
+    "static/js/2.a0c51f97.chunk.js.map": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/js/2.a0c51f97.chunk.js.map",
+    "index.html": "/coding-projects/ui_clones/reactjs/netflix_ui/build/index.html",
+    "precache-manifest.16942fec6fe342a424d6ac9a8223f6cb.js": "/coding-projects/ui_clones/reactjs/netflix_ui/build/precache-manifest.16942fec6fe342a424d6ac9a8223f6cb.js",
+    "service-worker.js": "/coding-projects/ui_clones/reactjs/netflix_ui/build/service-worker.js",
+    "static/css/main.3b8e739b.chunk.css.map": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/css/main.3b8e739b.chunk.css.map",
+    "static/js/2.a0c51f97.chunk.js.LICENSE.txt": "/coding-projects/ui_clones/reactjs/netflix_ui/build/static/js/2.a0c51f97.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3a61317f.js",
+    "static/js/2.a0c51f97.chunk.js",
+    "static/css/main.3b8e739b.chunk.css",
+    "static/js/main.2be31b68.chunk.js"
+  ]
+}
