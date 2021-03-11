@@ -1,60 +1,60 @@
 [{
         "username": "LCS",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "League of Legends",
         "watchers": "8.4K"
     },
     {
         "username": "Shroud",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Rust",
         "watchers": "72.5K"
     },
     {
         "username": "Chess",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Chess",
         "watchers": "30.5K"
     },
     {
         "username": "JeremyFrieser",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Minecraft",
         "watchers": "2.2K"
     },
     {
         "username": "Duncan",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Minecraft",
         "watchers": "854"
     },
     {
         "username": "CohhCarnage",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Stardew Valley",
         "watchers": "12.9K"
     },
     {
         "username": "hJune",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Rust",
         "watchers": "14.8K"
     },
     {
         "username": "Punz",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Minecraft",
         "watchers": "6.4K"
     },
     {
         "username": "Quin69",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Path of Exile",
         "watchers": "11.4K"
     },
     {
         "username": "Symfuhny",
-        "image": "/assets/images/bunny.jpg",
+        "image": "assets/images/bunny.jpg",
         "description": "Call of Duty: Warzone",
         "watchers": "12.8K"
     }

@@ -25,7 +25,7 @@ export default function MainBar() {
             <br />
             <span className="description">Visit r/Coronavirus to talk about COVID-19, and visit www.who.int for more information.</span>
           </div>
-          <img src="/assets/images/pin.jpg" />
+          <img src="./assets/images/pin.jpg" />
         </div>
       </div>
 
