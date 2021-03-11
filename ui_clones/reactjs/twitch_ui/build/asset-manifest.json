@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/css/main.e1415dc9.chunk.css",
+    "main.js": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/js/main.09ea5077.chunk.js",
+    "main.js.map": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/js/main.09ea5077.chunk.js.map",
+    "runtime-main.js": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/js/runtime-main.6a19e55b.js",
+    "runtime-main.js.map": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/js/runtime-main.6a19e55b.js.map",
+    "static/js/2.2135fa23.chunk.js": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/js/2.2135fa23.chunk.js",
+    "static/js/2.2135fa23.chunk.js.map": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/js/2.2135fa23.chunk.js.map",
+    "index.html": "/coding-projects/ui_clones/reactjs/twitch_ui/build/index.html",
+    "precache-manifest.e6273e1fd13d96a9ce0b211c3f7af797.js": "/coding-projects/ui_clones/reactjs/twitch_ui/build/precache-manifest.e6273e1fd13d96a9ce0b211c3f7af797.js",
+    "service-worker.js": "/coding-projects/ui_clones/reactjs/twitch_ui/build/service-worker.js",
+    "static/css/main.e1415dc9.chunk.css.map": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/css/main.e1415dc9.chunk.css.map",
+    "static/js/2.2135fa23.chunk.js.LICENSE.txt": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/js/2.2135fa23.chunk.js.LICENSE.txt",
+    "static/media/twitch_logo.png": "/coding-projects/ui_clones/reactjs/twitch_ui/build/static/media/twitch_logo.1f6704ce.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a19e55b.js",
+    "static/js/2.2135fa23.chunk.js",
+    "static/css/main.e1415dc9.chunk.css",
+    "static/js/main.09ea5077.chunk.js"
+  ]
+}
