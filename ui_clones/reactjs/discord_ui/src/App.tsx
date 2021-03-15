@@ -7,22 +7,26 @@ import {
   Redirect,
 } from "react-router-dom";
 
-//Explore route /guild-discovery -> guild-discovery page
-//Wrong url /guild-discoveryy -> 404 page
-
-//URL /channels/@me/huh
+import Home from "./pages/Home/Home";
+import GuildDiscovery from "./pages/GuildDiscovery/GuildDiscovery";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/channels/@me">
-          This is the homepage!
+          <Home />
         </Route>
         <Route path="/channels">
           <Redirect to="/channels/@me" />
         </Route>
-        <Route path="/about">I am about!</Route>
+        <Route path="/guild-discovery">
+          <GuildDiscovery />
+        </Route>
+        <Route>
+          <NotFound />
+        </Route>
       </Switch>
     </Router>
   );

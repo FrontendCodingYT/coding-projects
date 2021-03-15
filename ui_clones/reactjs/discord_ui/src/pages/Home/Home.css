@@ -1,0 +1,6 @@
+.home-page {
+    display: grid;
+    grid-template-areas: "navbar unclaimed unclaimed unclaimed" "navbar top-left top-main top-right" "navbar main-left main main-right" "navbar bottom-left bottom-main bottom-right";
+    height: 100vh;
+    background-color: green;
+}
