@@ -1,5 +1,4 @@
-# Repository for the Frontend Coding YouTube channel!
-Hello and welcome to the GitHub repository! Below are the links to the webapplications, they are hosted as static webpages using GitHub Pages.
+[![banner_thin](https://user-images.githubusercontent.com/36229816/112005873-73ed9b80-8b23-11eb-9ad7-2308f320777f.png)](https://www.youtube.com/channel/UCvRZy9EItwVN_2kxFCuA9vw)
 
 [Twitch UI](https://frontendcodingyt.github.io/coding-projects/ui_clones/reactjs/twitch_ui/build)
 
