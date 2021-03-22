@@ -1,6 +1,75 @@
 .home-page {
     display: grid;
     grid-template-areas: "navbar unclaimed unclaimed unclaimed" "navbar top-left top-main top-right" "navbar main-left main main-right" "navbar bottom-left bottom-main bottom-right";
+    grid-template-columns: 72px 240px auto 360px;
+    grid-template-rows: 36px 48px auto 52px;
     height: 100vh;
-    background-color: green;
+    color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .home-page {
+        grid-template-areas: "navbar unclaimed unclaimed unclaimed" "navbar top-left top-main top-right" "navbar main-left main main" "navbar bottom-left bottom-main bottom-main";
+    }
+    .home-page .main-right {
+        display: none;
+    }
+    .home-page .bottom-right {
+        display: none;
+    }
+}
+
+.home-page nav {
+    grid-area: navbar;
+    background-color: #202225;
+}
+
+.home-page .unclaimed {
+    grid-area: unclaimed;
+    background-color: #f26522;
+}
+
+.home-page .top-left {
+    grid-area: top-left;
+    background-color: #2f3136;
+}
+
+.home-page .top-main {
+    grid-area: top-main;
+    background-color: #36393f;
+}
+
+.home-page .top-right {
+    grid-area: top-right;
+    background-color: #36393f;
+}
+
+.home-page .main-left {
+    grid-area: main-left;
+    background-color: #2f3136;
+}
+
+.home-page .main {
+    grid-area: main;
+    background-color: #36393f;
+}
+
+.home-page .main-right {
+    grid-area: main-right;
+    background-color: #2f3136;
+}
+
+.home-page .bottom-left {
+    grid-area: bottom-left;
+    background-color: #292b2f;
+}
+
+.home-page .bottom-main {
+    grid-area: bottom-main;
+    background-color: #36393f;
+}
+
+.home-page .bottom-right {
+    grid-area: bottom-right;
+    background-color: #2f3136;
 }
