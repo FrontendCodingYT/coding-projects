@@ -21,7 +21,45 @@
 
 .home-page nav {
     grid-area: navbar;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
     background-color: #202225;
+}
+
+.home-page nav .discord-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.home-page nav .discord-button .indicator {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 4px;
+    height: 38px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: white;
+}
+
+.home-page nav .discord-button button {
+    border: none;
+    border-radius: 15px;
+    height: 48px;
+    width: 48px;
+    background-color: #7289da;
+    outline: none;
+}
+
+.home-page nav .discord-button button:hover {
+    cursor: pointer;
+}
+
+.home-page nav .discord-button button img {
+    width: 32px;
+    filter: brightness(100);
 }
 
 .home-page .unclaimed {
