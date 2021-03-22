@@ -53,6 +53,36 @@
     outline: none;
 }
 
+.home-page nav .discord-button button .tooltip {
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: calc(50% - 15px);
+    left: 85px;
+    height: 30px;
+    padding: 4px 12px;
+    border-radius: 5px;
+    background-color: #18191c;
+    color: #dcddde;
+    font-family: Whitney;
+    font-size: 1rem;
+}
+
+.home-page nav .discord-button button .tooltip::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #202225;
+    border-bottom: 5px solid transparent;
+}
+
+.home-page nav .discord-button button:hover .tooltip {
+    visibility: visible;
+}
+
 .home-page nav .discord-button button:hover {
     cursor: pointer;
 }

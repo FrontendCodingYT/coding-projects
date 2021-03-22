@@ -18,7 +18,8 @@ export default function Home() {
         <div className="discord-button">
             <div className="indicator"></div>
           <button>
-            <img src={discordLogo} />
+            <img alt="discord-logo" src={discordLogo} />
+            <span className="tooltip">Home</span>
           </button>
         </div>
         <div>divider</div>
