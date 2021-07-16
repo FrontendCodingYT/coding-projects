@@ -162,6 +162,44 @@ export default class Referee {
           }
         }
       }
+    } else if (type === PieceType.BISHOP) {
+      //Movement and attack logic for the bishop
+
+      //Up right movement
+      for(let i = 1; i < 8; i++)
+      {
+        if(desiredPosition.x - initialPosition.x === i && desiredPosition.y - initialPosition.y === i) {
+          console.log(`Moving up right ${i} squares`);
+          break;
+        }
+      }
+
+      //Bottom right movement
+      for(let i = 1; i < 8; i++)
+      {
+        if(desiredPosition.x - initialPosition.x === i && desiredPosition.y - initialPosition.y === -i) {
+          console.log(`Moving down right ${i} squares`);
+          break;
+        }
+      }
+
+      //Bottom left movement
+      for(let i = 1; i < 8; i++)
+      {
+        if(desiredPosition.x - initialPosition.x === -i && desiredPosition.y - initialPosition.y === -i) {
+          console.log(`Moving down left ${i} squares`);
+          break;
+        }
+      }
+
+      //Top left movement
+      for(let i = 1; i < 8; i++)
+      {
+        if(desiredPosition.x - initialPosition.x === -i && desiredPosition.y - initialPosition.y === i) {
+          console.log(`Moving top left ${i} squares`);
+          break;
+        }
+      }
     }
 
     return false;
