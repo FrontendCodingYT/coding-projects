@@ -273,6 +273,60 @@ export default class Referee {
     return false;
   }
 
+  queenMove(initialPosition: Position, desiredPosition: Position, team: TeamType, boardState: Piece[]): boolean {
+    for(let i = 1; i < 8; i++) {
+      // Vertical
+      if(desiredPosition.x === initialPosition.x) {
+        let multiplier = (desiredPosition.y < initialPosition.y) ? -1 : 1;
+        let passedPosition: Position = {x: initialPosition.x, y: initialPosition.y + (i * multiplier)};
+        if(samePosition(passedPosition, desiredPosition)) {
+          if(this.tileIsEmptyOrOccupiedByOpponent(passedPosition, boardState, team)) {
+            return true;
+          }
+        } else {
+          if(this.tileIsOccupied(passedPosition, boardState)) {
+            break;
+          }
+        }
+      }
+      // Horizontal
+      if(desiredPosition.y === initialPosition.y) {
+        let multiplier = (desiredPosition.x < initialPosition.x) ? -1 : 1;
+        let passedPosition: Position = {x: initialPosition.x + (i * multiplier), y: initialPosition.y};
+        if(samePosition(passedPosition, desiredPosition)) {
+          if(this.tileIsEmptyOrOccupiedByOpponent(passedPosition, boardState, team)) {
+            return true;
+          }
+        } else {
+          if(this.tileIsOccupied(passedPosition, boardState)) {
+            break;
+          }
+        }
+      }
+
+      //Top right
+      if(desiredPosition.y > initialPosition.y && desiredPosition.x > initialPosition.x) {
+        console.log("We are moving top right!");
+      }
+
+      //Bottom right
+      if(desiredPosition.y < initialPosition.y && desiredPosition.x > initialPosition.x) {
+        console.log("We are moving bottom right!");
+      }
+
+      //Bottom left
+      if(desiredPosition.y < initialPosition.y && desiredPosition.x < initialPosition.x) {
+        console.log("We are moving bottom left!");
+      }
+
+      //Top left
+      if(desiredPosition.y > initialPosition.y && desiredPosition.x < initialPosition.x) {
+        console.log("We are moving top left!");
+      }
+    }
+    return false;
+  }
+
 
   isValidMove(initialPosition: Position, desiredPosition: Position, type: PieceType, team: TeamType, boardState: Piece[]) {
     let validMove = false;
@@ -288,6 +342,12 @@ export default class Referee {
         break;
       case PieceType.ROOK:
         validMove = this.rookMove(initialPosition, desiredPosition, team, boardState);
+        break;
+      case PieceType.QUEEN:
+        validMove = this.queenMove(initialPosition, desiredPosition, team, boardState);
+        break;
+      case PieceType.KING:
+        //Function for the king
     }
 
     return validMove;
