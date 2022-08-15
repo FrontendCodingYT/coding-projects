@@ -1,0 +1,14 @@
+.FinishedDialog {
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 62px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
