@@ -41,11 +41,3 @@
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
-
-.tile-highlight::before {
-    content: " ";
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.4);
-}
