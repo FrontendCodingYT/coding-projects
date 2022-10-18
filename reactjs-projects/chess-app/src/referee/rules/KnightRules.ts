@@ -1,4 +1,5 @@
-import { Piece, Position, TeamType } from "../../Constants";
+import { TeamType } from "../../Constants";
+import { Piece, Position } from "../../models";
 import { tileIsEmptyOrOccupiedByOpponent } from "./GeneralRules";
 
 export const knightMove = (initialPosition: Position, desiredPosition: Position, team: TeamType, boardState: Piece[]): boolean => {
@@ -43,8 +44,8 @@ export const getPossibleKnightMoves = (knight: Piece, boardstate: Piece[]): Posi
 
   for (let i = -1; i < 2; i += 2) {
     for (let j = -1; j < 2; j += 2) {
-      const verticalMove: Position = { x: knight.position.x + j, y: knight.position.y + i * 2 };
-      const horizontalMove: Position = { x: knight.position.x + i * 2, y: + knight.position.y + j };
+      const verticalMove = new Position(knight.position.x + j, knight.position.y + i * 2);
+      const horizontalMove = new Position(knight.position.x + i * 2, knight.position.y + j);
 
       if(tileIsEmptyOrOccupiedByOpponent(verticalMove, boardstate, knight.team)) {
         possibleMoves.push(verticalMove);
