@@ -11,7 +11,7 @@ export const tileIsOccupied = (position: Position, boardState: Piece[]): boolean
     }
   }
 
-export const  tileIsOccupiedByOpponent = (
+export const tileIsOccupiedByOpponent = (
     position: Position,
     boardState: Piece[],
     team: TeamType

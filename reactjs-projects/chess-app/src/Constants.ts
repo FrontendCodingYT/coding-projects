@@ -1,3 +1,4 @@
+import { Board } from "./models/Board";
 import { Pawn } from "./models/Pawn";
 import { Piece } from "./models/Piece";
 import { Position } from "./models/Position";
@@ -8,7 +9,7 @@ export const HORIZONTAL_AXIS = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 export const GRID_SIZE = 100;
 
-export const initialBoardState: Piece[] = [
+export const initialBoard: Board = new Board([
   new Piece(
   new Position(0, 7), 
   PieceType.ROOK, 
@@ -122,4 +123,4 @@ export const initialBoardState: Piece[] = [
   new Pawn(
   new Position(7, 1),
   TeamType.OUR),
-];
+]);
