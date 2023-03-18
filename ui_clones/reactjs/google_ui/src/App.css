@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.spacer {
+  flex-grow: 0.75;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.background-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #202124;
+  height: 100vh;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.navigation-container > a {
+  font-size: 13px;
+  color: white;
+}
+
+.navigation-container > button {
+  padding: 10px 27px;
+  border-radius: 4px;
+  border: none;
+  font-size: 15px;
+  background-color: #8ab4f8;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.navigation-container > button:hover {
+  background-color: #93baf9;
+}
+
+.navigation-container > svg {
+  color: white;
+  font-size: 24px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 16px;
+}
+
+.search-container > img {
+  max-width: 256px;
+}
+
+.search-container > .button-container > button {
+  padding: 10px 27px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: #303134;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.search-container > .button-container > button:hover {
+  border-color: #7b7b7e;
+}
+
+.search-container > span {
+  color: white;
+}
+
+.search-container > span > a {
+  color: #8ab4f8;
+  margin-left: 8px;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-container > .searchbar {
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+  border-radius: 24px;
+  border: 1px solid #7b7b7e;
+  background-color: transparent;
+}
+
+.search-container > .searchbar:hover {
+  background-color: #303134;
+  border-color: transparent;
+}
+
+.search-container > .searchbar > svg {
+  color: white;
+  font-size: 21px;
+}
+
+.search-container > .searchbar > input {
+  margin: 0px 16px;
+  padding: 16px 0px;
+  min-width: 512px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > .layer {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  background-color: #171717;
+}
+
+footer > .layer:first-of-type {
+  padding-left: 32px;
+  border-bottom: 1px solid #545459;
+}
+
+footer > .layer:last-of-type {
+  justify-content: space-around;
+}
+
+footer > .layer > div {
+  display: flex;
+  gap: 16px;
+}
+
+footer span, footer a {
+  color: #9aa0a6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
