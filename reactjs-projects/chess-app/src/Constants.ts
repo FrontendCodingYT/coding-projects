@@ -123,4 +123,4 @@ export const initialBoard: Board = new Board([
   new Pawn(
   new Position(7, 1),
   TeamType.OUR),
-]);
+], 1);
