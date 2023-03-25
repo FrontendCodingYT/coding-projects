@@ -41,7 +41,7 @@ export default function Referee() {
 
         // playMove modifies the board thus we
         // need to call setBoard
-        setBoard((previousBoard) => {
+        setBoard(() => {
             const clonedBoard = board.clone();
             clonedBoard.totalTurns += 1;
             // Playing the move
@@ -88,7 +88,6 @@ export default function Referee() {
                         p.isPawn &&
                         (p as Pawn).enPassant
                 );
-                console.log(piece)
                 if (piece) {
                     return true;
                 }
@@ -140,7 +139,7 @@ export default function Referee() {
             clonedBoard.pieces = clonedBoard.pieces.reduce((results, piece) => {
                 if (piece.samePiecePosition(promotionPawn)) {
                     results.push(new Piece(piece.position.clone(), pieceType,
-                        piece.team));
+                        piece.team, true));
                 } else {
                     results.push(piece);
                 }
