@@ -7,7 +7,7 @@
     background-color: blue;
 }
 
-#pawn-promotion-modal {
+.modal {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -15,11 +15,11 @@
     left: 0px;
 }
 
-#pawn-promotion-modal.hidden {
+.modal.hidden {
     display: none;
 }
 
-#pawn-promotion-modal > .modal-body {
+.modal > .modal-body {
     position: absolute;
     top: calc(50% - 150px);
     left: calc(50% - 400px);
@@ -31,13 +31,36 @@
     background-color: rgba(127, 127, 127, 0.8);
 }
 
-#pawn-promotion-modal > .modal-body > img {
+.modal > .modal-body > img {
     height: 120px;
     padding: 20px;
     border-radius: 50%;
 }
 
-#pawn-promotion-modal > .modal-body > img:hover {
+.modal > .modal-body > img:hover {
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.modal > .modal-body > .checkmate-body {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.modal > .modal-body > .checkmate-body > span {
+    font-size: 32px;
+}
+
+.modal > .modal-body > .checkmate-body > button {
+    background-color: #779556;
+    border: none;
+    border-radius: 8px;
+    padding: 24px 48px;
+    font-size: 32px;
+    color: white;
+}
+
+.modal > .modal-body > .checkmate-body > button:hover {
     cursor: pointer;
 }
