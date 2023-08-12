@@ -3,6 +3,18 @@
     place-content: center;
     width: 100px;
     height: 100px;
+    background-color: #779556;
+}
+
+.tile:nth-child(16n + 1),
+.tile:nth-child(16n + 3),
+.tile:nth-child(16n + 5),
+.tile:nth-child(16n + 7),
+.tile:nth-child(16n + 10),
+.tile:nth-child(16n + 12),
+.tile:nth-child(16n + 14),
+.tile:nth-child(16n + 16) {
+    background-color: #ebecd0;
 }
 
 .tile .chess-piece {
@@ -19,14 +31,6 @@
 
 .tile .chess-piece:active {
     cursor: grabbing;
-}
-
-.black-tile {
-    background-color: #779556;
-}
-
-.white-tile {
-    background-color: #ebecd0;
 }
 
 .tile img {
