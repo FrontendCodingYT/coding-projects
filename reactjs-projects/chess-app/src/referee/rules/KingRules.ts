@@ -223,7 +223,10 @@ export const getCastlingMoves = (king: Piece, boardstate: Piece[]): Position[] =
       if(enemy.possibleMoves === undefined) continue;
 
       for(const move of enemy.possibleMoves) {
-        if(conceringTiles.some(t => t.samePosition(move))) {
+        // Checking if the king is in check
+        if(king.position.samePosition(move)) {
+          valid = false;
+        } else if(conceringTiles.some(t => t.samePosition(move))) {
           valid = false;
         }
 

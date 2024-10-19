@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { initialBoard } from "../../Constants";
 import { Piece, Position } from "../../models";
 import { Board } from "../../models/Board";
 import { Pawn } from "../../models/Pawn";
-import { bishopMove, getPossibleBishopMoves, getPossibleKingMoves, getPossibleKnightMoves, getPossiblePawnMoves, getPossibleQueenMoves, getPossibleRookMoves, kingMove, knightMove, pawnMove, queenMove, rookMove } from "../../referee/rules";
 import { PieceType, TeamType } from "../../Types";
 import Chessboard from "../Chessboard/Chessboard";
 
@@ -98,33 +97,6 @@ export default function Referee() {
         return false;
     }
 
-    //TODO
-    //Add stalemate!
-    function isValidMove(initialPosition: Position, desiredPosition: Position, type: PieceType, team: TeamType) {
-        let validMove = false;
-        switch (type) {
-            case PieceType.PAWN:
-                validMove = pawnMove(initialPosition, desiredPosition, team, board.pieces);
-                break;
-            case PieceType.KNIGHT:
-                validMove = knightMove(initialPosition, desiredPosition, team, board.pieces);
-                break;
-            case PieceType.BISHOP:
-                validMove = bishopMove(initialPosition, desiredPosition, team, board.pieces);
-                break;
-            case PieceType.ROOK:
-                validMove = rookMove(initialPosition, desiredPosition, team, board.pieces);
-                break;
-            case PieceType.QUEEN:
-                validMove = queenMove(initialPosition, desiredPosition, team, board.pieces);
-                break;
-            case PieceType.KING:
-                validMove = kingMove(initialPosition, desiredPosition, team, board.pieces);
-        }
-
-        return validMove;
-    }
-
     function promotePawn(pieceType: PieceType) {
         if (promotionPawn === undefined) {
             return;
@@ -164,10 +136,10 @@ export default function Referee() {
             <p style={{ color: "white", fontSize: "24px", textAlign: "center" }}>Total turns: {board.totalTurns}</p>
             <div className="modal hidden" ref={modalRef}>
                 <div className="modal-body">
-                    <img onClick={() => promotePawn(PieceType.ROOK)} src={`/assets/images/rook_${promotionTeamType()}.png`} />
-                    <img onClick={() => promotePawn(PieceType.BISHOP)} src={`/assets/images/bishop_${promotionTeamType()}.png`} />
-                    <img onClick={() => promotePawn(PieceType.KNIGHT)} src={`/assets/images/knight_${promotionTeamType()}.png`} />
-                    <img onClick={() => promotePawn(PieceType.QUEEN)} src={`/assets/images/queen_${promotionTeamType()}.png`} />
+                    <img alt="rook" onClick={() => promotePawn(PieceType.ROOK)} src={`/assets/images/rook_${promotionTeamType()}.png`} />
+                    <img alt="bishop" onClick={() => promotePawn(PieceType.BISHOP)} src={`/assets/images/bishop_${promotionTeamType()}.png`} />
+                    <img alt="knight" onClick={() => promotePawn(PieceType.KNIGHT)} src={`/assets/images/knight_${promotionTeamType()}.png`} />
+                    <img alt="queen" onClick={() => promotePawn(PieceType.QUEEN)} src={`/assets/images/queen_${promotionTeamType()}.png`} />
                 </div>
             </div>
             <div className="modal hidden" ref={checkmateModalRef}>
