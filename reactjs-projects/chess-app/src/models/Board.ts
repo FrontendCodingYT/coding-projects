@@ -8,10 +8,12 @@ export class Board {
     pieces: Piece[];
     totalTurns: number;
     winningTeam?: TeamType;
+    stalemate: boolean;
 
     constructor(pieces: Piece[], totalTurns: number) {
         this.pieces = pieces;
         this.totalTurns = totalTurns;
+        this.stalemate = false;
     }
 
     get currentTeam(): TeamType {
@@ -34,18 +36,33 @@ export class Board {
         // Check if the current team moves are valid
         this.checkCurrentTeamMoves();
 
+        const enemyMoves = this.pieces.filter(p => p.team !== this.currentTeam)
+        .map(p => p.possibleMoves).flat();
+
         // Remove the posibble moves for the team that is not playing
         for (const piece of
             this.pieces.filter(p => p.team !== this.currentTeam)) {
             piece.possibleMoves = [];
         }
 
+
         // Check if the playing team still has moves left
         // Otherwise, checkmate!
         if (this.pieces.filter(p => p.team === this.currentTeam)
             .some(p => p.possibleMoves !== undefined && p.possibleMoves.length > 0)) return;
 
-        this.winningTeam = (this.currentTeam === TeamType.OUR) ? TeamType.OPPONENT : TeamType.OUR;
+        // If any of the opponents team pieces can attack the king tile
+        // Then he is in check and the other team has won
+        const kingPosition = this.pieces.find(p => p.isKing 
+            && p.team === this.currentTeam)!.position;
+            
+        if(enemyMoves.some(m => m?.samePosition(kingPosition))) {
+            // King is in check!
+            this.winningTeam = (this.currentTeam === TeamType.OUR) ? TeamType.OPPONENT : TeamType.OUR;
+        } else {
+            // Stalemate
+            this.stalemate = true;
+        }
     }
 
     checkCurrentTeamMoves() {

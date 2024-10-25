@@ -9,8 +9,9 @@ import Chessboard from "../Chessboard/Chessboard";
 export default function Referee() {
     const [board, setBoard] = useState<Board>(initialBoard.clone());
     const [promotionPawn, setPromotionPawn] = useState<Piece>();
+    const [modalMessage, setModalMessage] = useState("");
     const modalRef = useRef<HTMLDivElement>(null);
-    const checkmateModalRef = useRef<HTMLDivElement>(null);
+    const endgameModalRef = useRef<HTMLDivElement>(null);
 
     function playMove(playedPiece: Piece, destination: Position): boolean {
         // If the playing piece doesn't have any moves return
@@ -44,9 +45,13 @@ export default function Referee() {
             playedMoveIsValid = clonedBoard.playMove(enPassantMove,
                 validMove, playedPiece,
                 destination);
-
-            if(clonedBoard.winningTeam !== undefined) {
-                checkmateModalRef.current?.classList.remove("hidden");
+            
+            if(clonedBoard.stalemate) {
+                setModalMessage("It's a stalemate!");
+                endgameModalRef.current?.classList.remove("hidden");
+            } else if(clonedBoard.winningTeam !== undefined) {
+                setModalMessage(`The winning team is ${clonedBoard.winningTeam === TeamType.OUR ? "white" : "black"}!`);
+                endgameModalRef.current?.classList.remove("hidden");
             }
 
             return clonedBoard;
@@ -127,7 +132,7 @@ export default function Referee() {
     }
     
     function restartGame() {
-        checkmateModalRef.current?.classList.add("hidden");
+        endgameModalRef.current?.classList.add("hidden");
         setBoard(initialBoard.clone());
     }
 
@@ -142,10 +147,10 @@ export default function Referee() {
                     <img alt="queen" onClick={() => promotePawn(PieceType.QUEEN)} src={`/assets/images/queen_${promotionTeamType()}.png`} />
                 </div>
             </div>
-            <div className="modal hidden" ref={checkmateModalRef}>
+            <div className="modal hidden" ref={endgameModalRef}>
                 <div className="modal-body">
                     <div className="checkmate-body">
-                        <span>The winning team is {board.winningTeam === TeamType.OUR ? "white" : "black"}!</span>
+                        <span>{modalMessage}</span>
                         <button onClick={restartGame}>Play again</button>
                     </div>
                 </div>
