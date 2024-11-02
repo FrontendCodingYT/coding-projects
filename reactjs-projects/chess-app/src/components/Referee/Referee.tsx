@@ -5,6 +5,7 @@ import { Board } from "../../models/Board";
 import { Pawn } from "../../models/Pawn";
 import { PieceType, TeamType } from "../../Types";
 import Chessboard from "../Chessboard/Chessboard";
+import "./Referee.css";
 
 export default function Referee() {
     const [board, setBoard] = useState<Board>(initialBoard.clone());
@@ -138,7 +139,6 @@ export default function Referee() {
 
     return (
         <>
-            <p style={{ color: "white", fontSize: "24px", textAlign: "center" }}>Total turns: {board.totalTurns}</p>
             <div className="modal hidden" ref={modalRef}>
                 <div className="modal-body">
                     <img alt="rook" onClick={() => promotePawn(PieceType.ROOK)} src={`/assets/images/rook_${promotionTeamType()}.png`} />
@@ -155,8 +155,17 @@ export default function Referee() {
                     </div>
                 </div>
             </div>
-            <Chessboard playMove={playMove}
-                pieces={board.pieces} />
+            <main>
+                <Chessboard playMove={playMove}
+                    pieces={board.pieces} />
+                <div className="information">
+                    <p>Total turns: {board.totalTurns}</p>
+                    <p>Current team: {board.currentTeam === TeamType.OPPONENT ? "black" : "white"}</p>
+                    <div className="moves">
+                        {board.moves.map(m => <p>{m.toMessage()}</p>)}
+                    </div>
+                </div>
+            </main>
         </>
     )
 }

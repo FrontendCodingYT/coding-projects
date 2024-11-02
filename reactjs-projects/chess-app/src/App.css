@@ -4,3 +4,7 @@
     height: 100vh;
     background-color: #202020;
 }
+
+p {
+    margin: 0;
+}

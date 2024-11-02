@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    gap: 1rem;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    max-height: 800px;
+    width: 320px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 4px;
+}
+
+.information > .moves {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-grow: 1;
+    margin-top: 2rem;
+    overflow-y: scroll; 
+}
+
+.information > .moves > p:first-child {
+    margin-top: auto;
+}

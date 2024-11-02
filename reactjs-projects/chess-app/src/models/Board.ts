@@ -1,5 +1,6 @@
 import { getPossibleBishopMoves, getPossibleKingMoves, getPossibleKnightMoves, getPossiblePawnMoves, getPossibleQueenMoves, getPossibleRookMoves, getCastlingMoves } from "../referee/rules";
 import { PieceType, TeamType } from "../Types";
+import { Move } from "./Move";
 import { Pawn } from "./Pawn";
 import { Piece } from "./Piece";
 import { Position } from "./Position";
@@ -9,11 +10,13 @@ export class Board {
     totalTurns: number;
     winningTeam?: TeamType;
     stalemate: boolean;
+    moves: Move[];
 
-    constructor(pieces: Piece[], totalTurns: number) {
+    constructor(pieces: Piece[], totalTurns: number, moves: Move[]) {
         this.pieces = pieces;
         this.totalTurns = totalTurns;
         this.stalemate = false;
+        this.moves = moves;
     }
 
     get currentTeam(): TeamType {
@@ -144,12 +147,7 @@ export class Board {
 
                 return p;
             });
-
-            this.calculateAllMoves();
-            return true;
-        }
-
-        if (enPassantMove) {
+        } else if (enPassantMove) {
             this.pieces = this.pieces.reduce((results, piece) => {
                 if (piece.samePiecePosition(playedPiece)) {
                     if (piece.isPawn)
@@ -169,8 +167,6 @@ export class Board {
 
                 return results;
             }, [] as Piece[]);
-
-            this.calculateAllMoves();
         } else if (validMove) {
             //UPDATES THE PIECE POSITION
             //AND IF A PIECE IS ATTACKED, REMOVES IT
@@ -197,17 +193,19 @@ export class Board {
                 // Won't be pushed in the results
                 return results;
             }, [] as Piece[]);
-
-            this.calculateAllMoves();
         } else {
             return false;
         }
 
+        // En passent or valid move or castling
+        this.moves.push(new Move(playedPiece.team, playedPiece.type,
+            playedPiece.position.clone(), destination.clone()));
+        this.calculateAllMoves();
         return true;
     }
 
     clone(): Board {
         return new Board(this.pieces.map(p => p.clone()),
-            this.totalTurns);
+            this.totalTurns, this.moves.map(m => m.clone()));
     }
 }
