@@ -10,12 +10,14 @@ export class Board {
     totalTurns: number;
     winningTeam?: TeamType;
     stalemate: boolean;
+    draw: boolean;
     moves: Move[];
 
     constructor(pieces: Piece[], totalTurns: number, moves: Move[]) {
         this.pieces = pieces;
         this.totalTurns = totalTurns;
         this.stalemate = false;
+        this.draw = false;
         this.moves = moves;
     }
 
@@ -201,7 +203,39 @@ export class Board {
         this.moves.push(new Move(playedPiece.team, playedPiece.type,
             playedPiece.position.clone(), destination.clone()));
         this.calculateAllMoves();
+        this.checkForDraw();
         return true;
+    }
+
+    checkForDraw(): void {
+        // Check for draw
+        // true if our team has only king or
+        // has king + knight or bishop
+        const ourTeamEligibleForDraw = 
+        this.pieces.filter(p => p.team === TeamType.OUR).length === 1||
+        this.pieces.filter(p => p.team === TeamType.OUR &&
+             (p.isKing || p.isKnight || p.isBishop)).length === 2;
+        
+        // true if opponent team has only king or
+        // has king + knight or bishop
+        const opponentTeamEligibleForDraw = 
+        this.pieces.filter(p => p.team === TeamType.OPPONENT).length === 1||
+        this.pieces.filter(p => p.team === TeamType.OPPONENT &&
+            (p.isKing || p.isKnight || p.isBishop)).length === 2;
+
+        if(ourTeamEligibleForDraw && opponentTeamEligibleForDraw) {
+            this.draw = true
+        } else if(this.pieces.filter(p => p.team === TeamType.OUR).length === 3 &&
+                  this.pieces.filter(p => p.team === TeamType.OUR && p.isKnight).length === 2 &&
+                  this.pieces.filter(p => p.team === TeamType.OPPONENT).length === 1) {
+                    // 1 king + 2 knights (our) vs 1 king
+                    this.draw = true;
+        } else if(this.pieces.filter(p => p.team === TeamType.OPPONENT).length === 3 &&
+                  this.pieces.filter(p => p.team === TeamType.OPPONENT && p.isKnight).length === 2 &&
+                  this.pieces.filter(p => p.team === TeamType.OUR).length === 1) {
+                    // 1 king + 2 knights (opponent) vs 1 king
+                    this.draw = true;
+        }
     }
 
     clone(): Board {

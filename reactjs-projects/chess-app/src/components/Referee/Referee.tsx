@@ -47,7 +47,10 @@ export default function Referee() {
                 validMove, playedPiece,
                 destination);
             
-            if(clonedBoard.stalemate) {
+            if(clonedBoard.draw) {
+                setModalMessage("It's a draw!");
+                endgameModalRef.current?.classList.remove("hidden");
+            } else if(clonedBoard.stalemate) {
                 setModalMessage("It's a stalemate!");
                 endgameModalRef.current?.classList.remove("hidden");
             } else if(clonedBoard.winningTeam !== undefined) {
@@ -162,7 +165,7 @@ export default function Referee() {
                     <p>Total turns: {board.totalTurns}</p>
                     <p>Current team: {board.currentTeam === TeamType.OPPONENT ? "black" : "white"}</p>
                     <div className="moves">
-                        {board.moves.map(m => <p>{m.toMessage()}</p>)}
+                        {board.moves.map((m, i) => <p key={i}>{m.toMessage()}</p>)}
                     </div>
                 </div>
             </main>
