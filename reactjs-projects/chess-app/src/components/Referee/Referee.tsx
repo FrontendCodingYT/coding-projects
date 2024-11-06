@@ -46,18 +46,9 @@ export default function Referee() {
             playedMoveIsValid = clonedBoard.playMove(enPassantMove,
                 validMove, playedPiece,
                 destination);
-            
-            if(clonedBoard.draw) {
-                setModalMessage("It's a draw!");
-                endgameModalRef.current?.classList.remove("hidden");
-            } else if(clonedBoard.stalemate) {
-                setModalMessage("It's a stalemate!");
-                endgameModalRef.current?.classList.remove("hidden");
-            } else if(clonedBoard.winningTeam !== undefined) {
-                setModalMessage(`The winning team is ${clonedBoard.winningTeam === TeamType.OUR ? "white" : "black"}!`);
-                endgameModalRef.current?.classList.remove("hidden");
-            }
 
+            checkForEndGame(clonedBoard);
+            
             return clonedBoard;
         })
 
@@ -125,6 +116,8 @@ export default function Referee() {
 
             clonedBoard.calculateAllMoves();
 
+            checkForEndGame(clonedBoard);
+
             return clonedBoard;
         })
 
@@ -138,6 +131,19 @@ export default function Referee() {
     function restartGame() {
         endgameModalRef.current?.classList.add("hidden");
         setBoard(initialBoard.clone());
+    }
+
+    function checkForEndGame(board: Board) {
+        if(board.draw) {
+            setModalMessage("It's a draw!");
+            endgameModalRef.current?.classList.remove("hidden");
+        } else if(board.stalemate) {
+            setModalMessage("It's a stalemate!");
+            endgameModalRef.current?.classList.remove("hidden");
+        } else if(board.winningTeam !== undefined) {
+            setModalMessage(`The winning team is ${board.winningTeam === TeamType.OUR ? "white" : "black"}!`);
+            endgameModalRef.current?.classList.remove("hidden");
+        }
     }
 
     return (

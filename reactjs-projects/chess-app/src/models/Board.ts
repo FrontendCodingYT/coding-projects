@@ -4,6 +4,7 @@ import { Move } from "./Move";
 import { Pawn } from "./Pawn";
 import { Piece } from "./Piece";
 import { Position } from "./Position";
+import { SimplifiedPiece } from "./SimplifiedPiece";
 
 export class Board {
     pieces: Piece[];
@@ -12,13 +13,17 @@ export class Board {
     stalemate: boolean;
     draw: boolean;
     moves: Move[];
+    boardHistory: { [key: string]: number };
 
-    constructor(pieces: Piece[], totalTurns: number, moves: Move[]) {
+    constructor(pieces: Piece[], totalTurns: number, moves: Move[],
+        boardHistory: { [key: string]: number }
+    ) {
         this.pieces = pieces;
         this.totalTurns = totalTurns;
         this.stalemate = false;
         this.draw = false;
         this.moves = moves;
+        this.boardHistory = boardHistory;
     }
 
     get currentTeam(): TeamType {
@@ -50,24 +55,15 @@ export class Board {
             piece.possibleMoves = [];
         }
 
+        this.checkForDraw();
+        this.checkForThreeFoldRepitition();
 
         // Check if the playing team still has moves left
         // Otherwise, checkmate!
         if (this.pieces.filter(p => p.team === this.currentTeam)
             .some(p => p.possibleMoves !== undefined && p.possibleMoves.length > 0)) return;
 
-        // If any of the opponents team pieces can attack the king tile
-        // Then he is in check and the other team has won
-        const kingPosition = this.pieces.find(p => p.isKing 
-            && p.team === this.currentTeam)!.position;
-            
-        if(enemyMoves.some(m => m?.samePosition(kingPosition))) {
-            // King is in check!
-            this.winningTeam = (this.currentTeam === TeamType.OUR) ? TeamType.OPPONENT : TeamType.OUR;
-        } else {
-            // Stalemate
-            this.stalemate = true;
-        }
+        this.checkForStalemate(enemyMoves);
     }
 
     checkCurrentTeamMoves() {
@@ -203,7 +199,7 @@ export class Board {
         this.moves.push(new Move(playedPiece.team, playedPiece.type,
             playedPiece.position.clone(), destination.clone()));
         this.calculateAllMoves();
-        this.checkForDraw();
+
         return true;
     }
 
@@ -238,8 +234,43 @@ export class Board {
         }
     }
 
+    checkForThreeFoldRepitition(): void {
+        const simplifiedPieces = 
+        this.pieces.map(p => new SimplifiedPiece(p));
+        
+        const simplifiedPiecesStringified = 
+        JSON.stringify(simplifiedPieces);
+
+        if(this.boardHistory[simplifiedPiecesStringified] === undefined) {
+            this.boardHistory[simplifiedPiecesStringified] = 1;
+        } else {
+            this.boardHistory[simplifiedPiecesStringified] += 1;
+        }
+
+        if(this.boardHistory[simplifiedPiecesStringified] === 3) {
+            // Threefold repition
+            this.draw = true;
+        }
+    }
+
+    checkForStalemate(enemyMoves: (Position | undefined)[]): void {
+        // If any of the opponents team pieces can attack the king tile
+        // Then he is in check and the other team has won
+        const kingPosition = this.pieces.find(p => p.isKing 
+            && p.team === this.currentTeam)!.position;
+            
+        if(enemyMoves.some(m => m?.samePosition(kingPosition))) {
+            // King is in check!
+            this.winningTeam = (this.currentTeam === TeamType.OUR) ? TeamType.OPPONENT : TeamType.OUR;
+        } else {
+            // Stalemate
+            this.stalemate = true;
+        }
+    }
+
     clone(): Board {
         return new Board(this.pieces.map(p => p.clone()),
-            this.totalTurns, this.moves.map(m => m.clone()));
+            this.totalTurns, this.moves.map(m => m.clone()),
+            this.boardHistory);
     }
 }
