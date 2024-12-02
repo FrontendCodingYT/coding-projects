@@ -14,9 +14,11 @@ export class Board {
     draw: boolean;
     moves: Move[];
     boardHistory: { [key: string]: number };
+    turnsWithNoCaptureOrPawnMove: number;
 
     constructor(pieces: Piece[], totalTurns: number, moves: Move[],
-        boardHistory: { [key: string]: number }
+        boardHistory: { [key: string]: number },
+        turnsWithNoCaptureOrPawnMove: number
     ) {
         this.pieces = pieces;
         this.totalTurns = totalTurns;
@@ -24,6 +26,8 @@ export class Board {
         this.draw = false;
         this.moves = moves;
         this.boardHistory = boardHistory;
+        this.turnsWithNoCaptureOrPawnMove =
+            turnsWithNoCaptureOrPawnMove;
     }
 
     get currentTeam(): TeamType {
@@ -55,6 +59,7 @@ export class Board {
             piece.possibleMoves = [];
         }
 
+        this.checkForFiftyMoveRule();
         this.checkForDraw();
         this.checkForThreeFoldRepitition();
 
@@ -131,6 +136,7 @@ export class Board {
         const pawnDirection = playedPiece.team === TeamType.OUR ? 1 : -1;
         const destinationPiece = this.pieces.find(p => p.samePosition(destination));
 
+        const piecesBeforeMove = this.pieces?.length;
         // If the move is a castling move do this
         if (playedPiece.isKing && destinationPiece?.isRook
             && destinationPiece.team === playedPiece.team) {
@@ -195,12 +201,26 @@ export class Board {
             return false;
         }
 
+        this.turnsWithNoCaptureOrPawnMove ++;
+
+        if(playedPiece.isPawn || this.pieces.length < piecesBeforeMove) {
+            // reset 50 move rule
+            this.turnsWithNoCaptureOrPawnMove = 0;
+        }
+
         // En passent or valid move or castling
         this.moves.push(new Move(playedPiece.team, playedPiece.type,
             playedPiece.position.clone(), destination.clone()));
         this.calculateAllMoves();
 
         return true;
+    }
+
+    checkForFiftyMoveRule(): void {
+        // Check for the 50 move rule
+        if(this.turnsWithNoCaptureOrPawnMove >= 50) {
+            this.draw = true;
+        }
     }
 
     checkForDraw(): void {
@@ -271,6 +291,7 @@ export class Board {
     clone(): Board {
         return new Board(this.pieces.map(p => p.clone()),
             this.totalTurns, this.moves.map(m => m.clone()),
-            this.boardHistory);
+            this.boardHistory, 
+            this.turnsWithNoCaptureOrPawnMove);
     }
 }
