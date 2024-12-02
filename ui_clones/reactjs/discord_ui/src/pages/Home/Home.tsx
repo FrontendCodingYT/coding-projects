@@ -22,13 +22,13 @@ export default function Home() {
             <span className="tooltip">Home</span>
           </button>
         </div>
-        <div>divider</div>
+        <div className="divider"></div>
         <button>Server</button>
-        <button>Public</button>
-        <div>divider</div>
+        <div className="divider"></div>
         <button>Download</button>
+        <button className="explore">Explore</button>
       </nav>
-      <div className="unclaimed">Unclaimed account</div>
+
       <div className="top-left">Top left</div>
       <div className="top-main">Top main</div>
       <div className="top-right">Top right</div>

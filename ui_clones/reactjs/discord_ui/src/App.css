@@ -1,1 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/whitney-2');
+
+:root {
+    --gray-dark: #5f8a9c;
+    --gray: #2f3136;
+    --gray-light: #36393f;
+}
