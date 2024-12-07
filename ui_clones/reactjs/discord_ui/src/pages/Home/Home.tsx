@@ -10,23 +10,37 @@ import "./Home.css";
 //Other buttons -> Component
 
 import discordLogo from "../../images/Discord logo.png";
+import IconButton from "../../components/IconButton/IconButton";
+import AddIcon from "../../icons/AddIcon";
+import ExploreIcon from "../../icons/ExploreIcon";
+import DownloadIcon from "../../icons/DownloadIcon";
+import Tooltip from "../../components/Tooltip/Tooltip";
 
 export default function Home() {
   return (
     <div className="home-page">
       <nav>
-        <div className="discord-button">
-            <div className="indicator"></div>
+        <div className="discord-button"> {/* Container */}
+          <div className="indicator"></div>
           <button>
-            <img alt="discord-logo" src={discordLogo} />
-            <span className="tooltip">Home</span>
+            <img alt="discord-logo" src={discordLogo} /> {/* Button */}
+            <span className="tooltip">Direct Messages</span> {/* Span */}
           </button>
         </div>
         <div className="divider"></div>
-        <button>Server</button>
+        <Tooltip title="Add a Server">
+          <IconButton icon={<AddIcon />} />
+        </Tooltip>
         <div className="divider"></div>
-        <button>Download</button>
-        <button className="explore">Explore</button>
+        <Tooltip title="Download Apps">
+          <IconButton icon={<DownloadIcon />} />
+        </Tooltip>
+        <Tooltip title="Discover">
+          <span>hello!</span>
+        </Tooltip>
+        <Tooltip title="Discover">
+          <IconButton icon={<ExploreIcon />} />
+        </Tooltip>
       </nav>
 
       <div className="top-left">Top left</div>

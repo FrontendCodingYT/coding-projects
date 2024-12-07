@@ -34,8 +34,13 @@
     background-color: #202225;
 }
 
-.home-page nav button.explore {
+.home-page nav > *:not(.discord-button) {
+    align-self: center;
+}
+
+.home-page nav > *:last-child {
     margin-top: auto;
+    fill: white;
 }
 
 .home-page nav .discord-button {
@@ -75,6 +80,7 @@
     height: 30px;
     padding: 4px 12px;
     border-radius: 5px;
+    white-space: nowrap;
     background-color: #18191c;
     color: #dcddde;
     font-family: Whitney;
@@ -86,7 +92,7 @@
     position: absolute;
     left: -5px;
     border-top: 5px solid transparent;
-    border-right: 5px solid #202225;
+    border-right: 5px solid #18191c;
     border-bottom: 5px solid transparent;
 }
 
@@ -146,16 +152,6 @@
 .home-page .bottom-right {
     grid-area: bottom-right;
     background-color: var(--gray);
-}
-
-.home-page nav > button {
-    align-self: center;
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--gray);
-    color: rgb(59, 195, 59);
 }
 
 .home-page nav .divider {

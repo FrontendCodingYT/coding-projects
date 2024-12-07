@@ -1,0 +1,20 @@
+button.icon-button {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--gray);
+    fill: var(--secondary-color);
+    transition: all 100ms ease-in-out;
+
+    &:hover {
+        border-radius: 30%;
+        background-color: var(--secondary-color);
+        fill: white;
+    }
+}
+
+button.icon-button>svg {
+    height: 1.6rem;
+    width: 1.6rem;
+}

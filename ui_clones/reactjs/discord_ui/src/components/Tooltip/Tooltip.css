@@ -1,0 +1,38 @@
+.tooltip-container {
+    position: relative;
+}
+
+/* Selecting the tooltip container which is a class */
+/* Select direct child which is button and is being hovered */
+/* + operator in CSS targets the adjacent element */
+.tooltip-container > :first-child:hover + span.tooltip {
+    visibility: visible;
+}
+
+span.tooltip {
+    position: absolute;
+    box-sizing: border-box;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: calc(50% - 1rem);
+    left: 4.25rem;
+    height: 2rem;
+    padding: 4px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    background-color: #18191c;
+    color: #dcddde;
+    font-family: Whitney;
+    font-size: 1rem;
+}
+
+span.tooltip::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #18191c;
+    border-bottom: 5px solid transparent;
+}
