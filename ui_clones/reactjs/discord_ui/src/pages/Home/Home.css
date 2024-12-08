@@ -160,3 +160,24 @@
     height: 2px;
     background-color: var(--gray);
 }
+
+nav > .tooltip-container~.tooltip-container:hover::after {
+    transform: scale(1);
+}
+
+nav > .tooltip-container~.tooltip-container::after {
+    content: "";
+    position: fixed;
+    display: inline-block;
+    left: 0;
+    margin-top: 12px;
+    height: 1.5rem;
+    width: 0.25rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: white;
+
+    transform: scale(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: center left;
+}

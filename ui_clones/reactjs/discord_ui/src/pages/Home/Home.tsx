@@ -35,9 +35,7 @@ export default function Home() {
         <Tooltip title="Download Apps">
           <IconButton icon={<DownloadIcon />} />
         </Tooltip>
-        <Tooltip title="Discover">
-          <span>hello!</span>
-        </Tooltip>
+
         <Tooltip title="Discover">
           <IconButton icon={<ExploreIcon />} />
         </Tooltip>

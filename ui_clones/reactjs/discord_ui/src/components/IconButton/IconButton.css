@@ -6,6 +6,7 @@ button.icon-button {
     background-color: var(--gray);
     fill: var(--secondary-color);
     transition: all 100ms ease-in-out;
+    cursor: pointer;
 
     &:hover {
         border-radius: 30%;
