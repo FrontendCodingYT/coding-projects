@@ -31,7 +31,7 @@
     flex-direction: column;
     gap: 8px;
     padding-top: 12px;
-    background-color: #202225;
+    background-color: var(--dark-grey);
 }
 
 .home-page nav > *:not(.discord-button) {
@@ -111,7 +111,12 @@
 
 .home-page .top-left {
     grid-area: top-left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
     background-color: var(--gray);
+    border-bottom: 1px solid var(--dark-grey);
 }
 
 .home-page .top-main {
@@ -180,4 +185,16 @@ nav > .tooltip-container~.tooltip-container::after {
     transform: scale(0);
     transition: transform 250ms ease-in-out;
     transform-origin: center left;
+}
+
+button.find-conversation {
+    flex: 1;
+    height: 30px;
+    padding-inline: 0.25rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--dark-grey);
+    color: #949ba4;
+    text-align: start;
+    cursor: pointer;
 }

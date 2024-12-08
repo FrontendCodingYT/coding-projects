@@ -29,11 +29,11 @@ export default function Home() {
         </div>
         <div className="divider"></div>
         <Tooltip title="Add a Server">
-          <IconButton icon={<AddIcon />} />
+          <IconButton iconColor="secondary" icon={<AddIcon />} />
         </Tooltip>
         <div className="divider"></div>
         <Tooltip title="Download Apps">
-          <IconButton icon={<DownloadIcon />} />
+          <IconButton iconColor="secondary" icon={<DownloadIcon />} />
         </Tooltip>
 
         <Tooltip title="Discover">
@@ -41,7 +41,9 @@ export default function Home() {
         </Tooltip>
       </nav>
 
-      <div className="top-left">Top left</div>
+      <div className="top-left">
+        <button className="find-conversation">Find or start a conversation</button>
+      </div>
       <div className="top-main">Top main</div>
       <div className="top-right">Top right</div>
       <div className="main-left">Main left row</div>

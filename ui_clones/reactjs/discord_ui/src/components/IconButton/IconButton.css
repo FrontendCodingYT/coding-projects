@@ -4,9 +4,12 @@ button.icon-button {
     border-radius: 50%;
     border: none;
     background-color: var(--gray);
-    fill: var(--secondary-color);
     transition: all 100ms ease-in-out;
     cursor: pointer;
+
+    &.secondary {
+        fill: var(--secondary-color);
+    }
 
     &:hover {
         border-radius: 30%;
